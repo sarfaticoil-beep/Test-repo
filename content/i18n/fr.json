@@ -134,7 +134,10 @@
   "paidTitle": "Merci ! Votre paiement a bien été reçu.",
   "paidText": "Une confirmation vous a été envoyée et votre commande est en préparation. Numéro de commande :",
   "failedText": "Le paiement n'a pas abouti. Vous pouvez réessayer, ou envoyer la commande sur WhatsApp.",
-  "cartIntroPay": "Vérifiez votre commande, remplissez vos coordonnées et payez par carte en toute sécurité – votre commande est lancée."
+  "cartIntroPay": "Vérifiez votre commande, remplissez vos coordonnées et payez par carte en toute sécurité – votre commande est lancée.",
+  "rememberMe": "Se souvenir de mes coordonnées sur cet appareil",
+  "prefilled": "Vos coordonnées ont été remplies automatiquement.",
+  "forgetMe": "Effacer mes coordonnées"
  },
  "js": {
   "added": "Ajouté au panier : ",

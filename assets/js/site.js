@@ -277,6 +277,7 @@
     });
     document.addEventListener("cart:change", render);
     if (form) {
+      prefillDetails(form);
       form.addEventListener("change", renderSummary);
       var dateInput = form.querySelector("input[type=date]");
       if (dateInput) {
@@ -298,6 +299,7 @@
         }
         if (!form.reportValidity()) return;
         var fd = new FormData(form);
+        rememberDetails(form);
         var via = e.submitter && e.submitter.dataset.pay;
         if (CFG.payments && via !== "wa") { payByCard(fd, m, status); return; }
         var ship = shippingFor(sub, m);
@@ -344,6 +346,47 @@
       $("[data-failed]", root).hidden = false;
     }
     render();
+  }
+
+  /* ---------- "remember my details" (stored only in this browser) ---------- */
+  var DETAILS_KEY = "sarfati_customer_v1";
+  var DETAIL_FIELDS = ["name", "phone", "email", "zone", "city", "address"];
+
+  function prefillDetails(form) {
+    var saved = null;
+    try { saved = JSON.parse(localStorage.getItem(DETAILS_KEY) || "null"); } catch (e) { saved = null; }
+    if (!saved) return;
+    DETAIL_FIELDS.forEach(function (k) {
+      var f = form.elements[k];
+      if (f && saved[k] && (f.tagName === "SELECT" || !f.value)) f.value = saved[k];
+    });
+    if (saved.method && form.querySelector('input[name=method][value="' + saved.method + '"]')) {
+      form.querySelector('input[name=method][value="' + saved.method + '"]').checked = true;
+    }
+    var box = form.querySelector("[data-remember]");
+    if (box) box.checked = true;
+    var note = form.querySelector("[data-prefilled]");
+    if (note) note.hidden = false;
+    var forget = form.querySelector("[data-forget]");
+    if (forget) forget.addEventListener("click", function () {
+      try { localStorage.removeItem(DETAILS_KEY); } catch (e) { /* ignore */ }
+      DETAIL_FIELDS.forEach(function (k) { if (form.elements[k] && k !== "zone") form.elements[k].value = ""; });
+      if (box) box.checked = false;
+      note.hidden = true;
+    });
+  }
+
+  function rememberDetails(form) {
+    var box = form.querySelector("[data-remember]");
+    try {
+      if (box && box.checked) {
+        var data = { method: (form.querySelector("input[name=method]:checked") || {}).value };
+        DETAIL_FIELDS.forEach(function (k) { if (form.elements[k]) data[k] = form.elements[k].value; });
+        localStorage.setItem(DETAILS_KEY, JSON.stringify(data));
+      } else {
+        localStorage.removeItem(DETAILS_KEY);
+      }
+    } catch (e) { /* private mode: nothing saved */ }
   }
 
   function payByCard(fd, method, status) {

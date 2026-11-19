@@ -134,7 +134,10 @@
   "paidTitle": "Thank you! Your payment was received.",
   "paidText": "A confirmation has been sent and your order is being prepared. Order number:",
   "failedText": "The payment was not completed. You can try again, or send the order on WhatsApp.",
-  "cartIntroPay": "Check your order, fill in your details and pay securely by card – and your order is on its way."
+  "cartIntroPay": "Check your order, fill in your details and pay securely by card – and your order is on its way.",
+  "rememberMe": "Remember my details on this device for next time",
+  "prefilled": "Your details were filled in automatically.",
+  "forgetMe": "Forget my details"
  },
  "js": {
   "added": "Added to cart: ",

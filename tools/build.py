@@ -800,6 +800,7 @@ def build_cart():
       <ul class="cart-items" data-cart-items></ul>
       <form id="checkout-form" class="form-card mt-3" novalidate>
         <h2>{E(ui('orderDetails'))}</h2>
+        <p class="small muted" data-prefilled hidden>{E(ui('prefilled'))} <button type="button" class="linklike" data-forget>{E(ui('forgetMe'))}</button></p>
         <fieldset style="border:0;padding:0;margin:0 0 18px"><legend class="field" style="font-weight:700;margin-bottom:8px">{E(ui('howReceive'))}</legend>
           <div class="radio-cards">
             <label class="radio-card"><input type="radio" name="method" value="delivery" checked><strong>{E(ui('mDelivery'))}</strong><span>{E(ui('mDeliveryD'))}</span></label>
@@ -817,6 +818,7 @@ def build_cart():
           <div class="field" data-delivery-only><label for="co-address">{E(ui('fAddress'))}</label><input id="co-address" name="address" type="text" autocomplete="street-address" data-req required></div>
           <div class="field"><label for="co-date">{E(ui('fDate'))}</label><input id="co-date" name="date" type="date"></div>
           <div class="field full"><label for="co-notes">{E(ui('fNotes'))}</label><textarea id="co-notes" name="notes" rows="3"></textarea></div>
+          <label class="check full"><input type="checkbox" name="remember" data-remember> <span>{E(ui('rememberMe'))}</span></label>
           <label class="check full"><input type="checkbox" required> <span>{ui('fAgree', terms=u(lpath('terms')))}</span></label>
         </div>
         {pay_buttons()}
