@@ -127,7 +127,14 @@
   "termsHebrew": "Les conditions d'utilisation et la politique de confidentialité qui font foi sont publiées en hébreu. Voici un résumé du fonctionnement des commandes.",
   "termsFull": "Lire les conditions complètes (hébreu)",
   "langName": "Français",
-  "termsOrder": "<p><strong>Commandes via le site :</strong> choisir des produits et envoyer votre commande (par WhatsApp ou formulaire) constitue une simple demande de commande. La commande devient définitive une fois qu'un représentant de Sarfati vous a confirmé, par téléphone ou par écrit, la disponibilité, le poids final, la date de livraison et le prix, et que le paiement a été effectué.</p><p>Les produits au poids sont facturés au poids réel. Commande minimum pour la livraison {min}, frais de livraison {fee}, livraison offerte dès {free}.</p><p>Les annulations sont régies par la loi israélienne sur la protection du consommateur ; les denrées périssables ne peuvent pas être retournées après livraison.</p><p><strong>Confidentialité :</strong> nous utilisons vos coordonnées uniquement pour traiter votre commande ou votre demande et, si vous avez rejoint le club clients, pour vous envoyer nos offres. Nous ne vendons pas vos données à des tiers. Pour les modifier ou les supprimer : {email}.</p>"
+  "termsOrder": "<p><strong>Commandes via le site :</strong> choisir des produits et envoyer votre commande (par WhatsApp ou formulaire) constitue une simple demande de commande. La commande devient définitive une fois qu'un représentant de Sarfati vous a confirmé, par téléphone ou par écrit, la disponibilité, le poids final, la date de livraison et le prix, et que le paiement a été effectué.</p><p>Les produits au poids sont facturés au poids réel. Commande minimum pour la livraison {min}, frais de livraison {fee}, livraison offerte dès {free}.</p><p>Les annulations sont régies par la loi israélienne sur la protection du consommateur ; les denrées périssables ne peuvent pas être retournées après livraison.</p><p><strong>Confidentialité :</strong> nous utilisons vos coordonnées uniquement pour traiter votre commande ou votre demande et, si vous avez rejoint le club clients, pour vous envoyer nos offres. Nous ne vendons pas vos données à des tiers. Pour les modifier ou les supprimer : {email}.</p>",
+  "payCard": "Payer par carte en toute sécurité",
+  "paySecure": "Le paiement se fait sur la page sécurisée iCredit de Rivhit. Les produits au poids sont facturés au poids réel.",
+  "orWhatsapp": "ou envoyer la commande sur WhatsApp, nous vous rappelons",
+  "paidTitle": "Merci ! Votre paiement a bien été reçu.",
+  "paidText": "Une confirmation vous a été envoyée et votre commande est en préparation. Numéro de commande :",
+  "failedText": "Le paiement n'a pas abouti. Vous pouvez réessayer, ou envoyer la commande sur WhatsApp.",
+  "cartIntroPay": "Vérifiez votre commande, remplissez vos coordonnées et payez par carte en toute sécurité – votre commande est lancée."
  },
  "js": {
   "added": "Ajouté au panier : ",
@@ -161,7 +168,10 @@
   "orderReady": "Votre commande est prête ! WhatsApp s'ouvre avec votre commande – il suffit d'envoyer. S'il ne s'ouvre pas, <a href=\"{url}\" target=\"_blank\" rel=\"noopener\">cliquez ici</a>. Nous vous recontactons pour confirmer et régler.",
   "fromSite": " – depuis le site",
   "thanks": "Merci ! Nous avons bien reçu vos coordonnées et vous recontacterons rapidement.",
-  "almost": "Presque terminé – WhatsApp s'ouvre avec vos informations, il suffit d'envoyer. <a href=\"{url}\" target=\"_blank\" rel=\"noopener\">Rien ne s'ouvre ? Cliquez ici</a>"
+  "almost": "Presque terminé – WhatsApp s'ouvre avec vos informations, il suffit d'envoyer. <a href=\"{url}\" target=\"_blank\" rel=\"noopener\">Rien ne s'ouvre ? Cliquez ici</a>",
+  "paying": "Redirection vers la page de paiement sécurisée…",
+  "payError": "Impossible d'ouvrir la page de paiement. Réessayez, ou envoyez la commande sur WhatsApp.",
+  "unavailable": "Un des produits est épuisé. Mettez à jour votre panier et réessayez."
  },
  "days": {
   "ראשון–שני": "Dim–Lun",

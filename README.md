@@ -47,6 +47,25 @@ Forms (contact, events, club, business) also open WhatsApp. To get them by **ema
 
 Orders then also arrive by email, in addition to WhatsApp.
 
+## Online card payment (Rivhit iCredit)
+
+Card payment needs a small server function, `functions/api/checkout.js`, so it runs on **Cloudflare Pages** (free), not GitHub Pages.
+The function recalculates every price from the catalogue (the browser cannot change prices), checks the delivery minimum and stock,
+then asks iCredit for a secure payment page. Order details (items, address, delivery day, notes) go into the iCredit sale,
+and a copy of every paid order is e-mailed to `ORDER_EMAIL`.
+
+Set up once in Cloudflare Pages (Settings → Variables and secrets):
+
+| Name | Value |
+|---|---|
+| `PAYMENTS` | `1` (build variable: shows the "Pay by card" button) |
+| `ICREDIT_TOKEN` | **secret** – the iCredit payment page token (GroupPrivateToken) from Rivhit |
+| `ICREDIT_SANDBOX` | `1` while testing with Rivhit's test token, `0` for real payments |
+| `ICREDIT_SALE_TYPE` | `2` = J5 hold (charge the final amount after weighing), `1` = charge immediately |
+| `ORDER_EMAIL` | the e-mail that receives a copy of every paid order |
+
+Without `PAYMENTS=1` (e.g. on GitHub Pages) the site keeps sending orders by WhatsApp.
+
 ## Free hosting
 
 **Option A – GitHub Pages (already set up):**
@@ -55,9 +74,10 @@ Orders then also arrive by email, in addition to WhatsApp.
 3. The workflow in `.github/workflows/deploy.yml` builds and publishes the site.
 4. Custom domain: in *Settings → Pages*, enter `www.sarfati.co.il`. At your domain registrar, add a `CNAME` record from `www` to `<your-github-username>.github.io`, and the four `A` records for the bare domain that GitHub lists in its docs. Turn on *Enforce HTTPS*.
 
-**Option B – Cloudflare Pages or Netlify (also free):** connect the repository and set:
+**Option B – Cloudflare Pages (free, needed for card payment):** connect the repository and set:
 - Build command: `python3 tools/build.py`
 - Output directory: `_site`
+- Environment variables: see "Online card payment" above.
 
 **Keep old links working:** product, category, blog and page URLs match the old WordPress addresses, so Google rankings and shared links carry over. Old pages that no longer exist (e.g. `/en/`, `/my-account/`) redirect to their closest replacement.
 

@@ -127,7 +127,14 @@
   "termsHebrew": "The binding terms of use and privacy policy are published in Hebrew. Below is a summary of how ordering works.",
   "termsFull": "Read the full terms (Hebrew)",
   "langName": "English",
-  "termsOrder": "<p><strong>Orders through the website:</strong> choosing products on the site and sending your order (by WhatsApp or a form) is an order request only. The order is final once a Sarfati representative has confirmed with you, by phone or in writing, availability, final weight, delivery date and price, and payment has been made.</p><p>Products sold by weight are charged by actual weight. Minimum order for delivery {min}, delivery fee {fee}, free delivery over {free}.</p><p>Cancellations follow the Israeli Consumer Protection Law; perishable food cannot be returned after delivery.</p><p><strong>Privacy:</strong> we use the details you send us only to handle your order or enquiry and, if you joined the customer club, to send you offers. We do not sell your details to third parties. To update or delete your details, contact us at {email}.</p>"
+  "termsOrder": "<p><strong>Orders through the website:</strong> choosing products on the site and sending your order (by WhatsApp or a form) is an order request only. The order is final once a Sarfati representative has confirmed with you, by phone or in writing, availability, final weight, delivery date and price, and payment has been made.</p><p>Products sold by weight are charged by actual weight. Minimum order for delivery {min}, delivery fee {fee}, free delivery over {free}.</p><p>Cancellations follow the Israeli Consumer Protection Law; perishable food cannot be returned after delivery.</p><p><strong>Privacy:</strong> we use the details you send us only to handle your order or enquiry and, if you joined the customer club, to send you offers. We do not sell your details to third parties. To update or delete your details, contact us at {email}.</p>",
+  "payCard": "Pay securely by card",
+  "paySecure": "Payment is made on Rivhit's secure iCredit page. Products sold by weight are charged by actual weight.",
+  "orWhatsapp": "or send the order on WhatsApp and we'll call you",
+  "paidTitle": "Thank you! Your payment was received.",
+  "paidText": "A confirmation has been sent and your order is being prepared. Order number:",
+  "failedText": "The payment was not completed. You can try again, or send the order on WhatsApp.",
+  "cartIntroPay": "Check your order, fill in your details and pay securely by card – and your order is on its way."
  },
  "js": {
   "added": "Added to cart: ",
@@ -161,7 +168,10 @@
   "orderReady": "Your order is ready! WhatsApp is opening with your order filled in – just press send. If it doesn't open, <a href=\"{url}\" target=\"_blank\" rel=\"noopener\">click here</a>. We'll get back to you to confirm and arrange payment.",
   "fromSite": " – from the website",
   "thanks": "Thank you! We've received your details and will be in touch soon.",
-  "almost": "Almost done – WhatsApp is opening with your details, just press send. <a href=\"{url}\" target=\"_blank\" rel=\"noopener\">Didn't open? Click here</a>"
+  "almost": "Almost done – WhatsApp is opening with your details, just press send. <a href=\"{url}\" target=\"_blank\" rel=\"noopener\">Didn't open? Click here</a>",
+  "paying": "Taking you to the secure payment page…",
+  "payError": "We couldn't open the payment page. Please try again, or send the order on WhatsApp.",
+  "unavailable": "One of the products is out of stock. Please update your cart and try again."
  },
  "days": {
   "ראשון–שני": "Sun–Mon",

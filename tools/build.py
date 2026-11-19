@@ -26,6 +26,8 @@ from urllib.parse import quote
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "_site"
 BASE = os.environ.get("BASE_PATH", "").rstrip("/")
+# card payments need the Cloudflare Pages function (functions/api/checkout.js); turn on with PAYMENTS=1 at build time
+PAYMENTS = os.environ.get("PAYMENTS", "0") == "1"
 SITE = json.loads((ROOT / "content/site.json").read_text(encoding="utf-8"))
 PRODUCTS = json.loads((ROOT / "assets/data/products.json").read_text(encoding="utf-8"))
 POSTS = json.loads((ROOT / "assets/data/posts.json").read_text(encoding="utf-8"))
@@ -769,13 +771,27 @@ def map_old_link(href):
 
 
 # ---------------------------------------------------------------- cart / checkout
+LOCK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>'
+
+
+def pay_buttons():
+    if PAYMENTS:
+        return f"""<button type="submit" class="btn btn--primary btn--block mt-2" data-submit-order data-pay="card">{LOCK} {E(ui('payCard'))}</button>
+        <p class="small muted mt-2 mb-0">{E(ui('paySecure'))}</p>
+        <p class="small mt-2 mb-0"><button type="submit" class="linklike" data-pay="wa">{E(ui('orWhatsapp'))}</button></p>"""
+    return f"""<button type="submit" class="btn btn--wa btn--block mt-2" data-submit-order data-pay="wa">{ICON['wa']} {E(ui('sendWa'))}</button>
+        <p class="small muted mt-2 mb-0">{E(ui('payNote'))} <a href="tel:{SITE['phoneIntl']}" dir="ltr">{SITE['phone']}</a></p>"""
+
+
 def build_cart():
     s = SITE["shipping"]
     for lang in LANGS:
         set_lang(lang)
         zones = "".join(f'<option value="{z["id"]}">{E(T["zones"][z["id"]][0])} – {E(T["zones"][z["id"]][1])}</option>' for z in s["zones"])
-        body = page_hero(ui("cartTitle"), E(ui("cartIntro")), [(ui("cartTitle"), None)]) + f"""
+        body = page_hero(ui("cartTitle"), E(ui("cartIntroPay" if PAYMENTS else "cartIntro")), [(ui("cartTitle"), None)]) + f"""
 <section class="section" data-cart-page><div class="wrap">
+  <div class="note" data-paid hidden><strong>{E(ui('paidTitle'))}</strong><br>{E(ui('paidText'))} <span data-order-ref></span></div>
+  <div class="note note--err" data-failed hidden>{E(ui('failedText'))}</div>
   <div data-cart-empty hidden class="empty-state">
     <h2>{E(ui('cartEmpty'))}</h2><p>{E(ui('cartEmptyText'))}</p><a class="btn btn--primary" href="{u(lpath('shop'))}">{E(ui('toShop'))}</a>
   </div>
@@ -803,8 +819,7 @@ def build_cart():
           <div class="field full"><label for="co-notes">{E(ui('fNotes'))}</label><textarea id="co-notes" name="notes" rows="3"></textarea></div>
           <label class="check full"><input type="checkbox" required> <span>{ui('fAgree', terms=u(lpath('terms')))}</span></label>
         </div>
-        <button type="submit" class="btn btn--wa btn--block mt-2" data-submit-order>{ICON['wa']} {E(ui('sendWa'))}</button>
-        <p class="small muted mt-2 mb-0">{E(ui('payNote'))} <a href="tel:{SITE['phoneIntl']}" dir="ltr">{SITE['phone']}</a></p>
+        {pay_buttons()}
         <div class="form-status" role="status" aria-live="polite"></div>
         <p data-clear-after hidden class="mt-2"><button type="button" class="btn btn--ghost btn--sm" data-clear-cart>{E(ui('clearAfter'))}</button></p>
       </form>
@@ -902,7 +917,11 @@ def build_static():
         "window.SARFATI = " + json.dumps({
             "base": BASE, "whatsapp": SITE["whatsapp"], "phone": SITE["phone"], "shipping": SITE["shipping"],
             "formEndpoint": SITE.get("formEndpoint", ""), "formAccessKey": SITE.get("formAccessKey", ""),
+            "payments": PAYMENTS, "checkoutUrl": u("/api/checkout"),
         }, ensure_ascii=False) + ";\n", encoding="utf-8")
+    sh = SITE["shipping"]
+    (OUT / "assets/data/shop-rules.json").write_text(
+        json.dumps({"minOrder": sh["minOrder"], "fee": sh["fee"], "freeOver": sh["freeOver"]}), encoding="utf-8")
     for extra in ("CNAME",):
         if (ROOT / extra).exists():
             shutil.copy(ROOT / extra, OUT / extra)

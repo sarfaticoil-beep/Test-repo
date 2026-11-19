@@ -451,3 +451,5 @@ body:has([data-cart-page]) .wa-float { display: none; }
 .crumbs-light { color: var(--muted); padding-top: 18px; }
 .crumbs-light a { color: var(--navy); }
 @media (max-width: 420px) { .lang-switch summary span { display: none; } .lang-switch summary { padding: 0 8px; } }
+.note--err { background: #fbe9e7; border-color: var(--danger); }
+.linklike { background: none; border: 0; padding: 0; color: var(--navy); text-decoration: underline; cursor: pointer; font: inherit; }

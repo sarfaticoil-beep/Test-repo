@@ -298,6 +298,8 @@
         }
         if (!form.reportValidity()) return;
         var fd = new FormData(form);
+        var via = e.submitter && e.submitter.dataset.pay;
+        if (CFG.payments && via !== "wa") { payByCard(fd, m, status); return; }
         var ship = shippingFor(sub, m);
         var methodLabel = { delivery: T.mDelivery, shilat: T.mShilat, sarona: T.mSarona }[m];
         var lines = ["*" + T.orderTitle + "*" + (LANG !== "he" ? " [" + LANG.toUpperCase() + "]" : ""), ""];
@@ -330,7 +332,44 @@
     }
     var clear = $("[data-clear-cart]");
     if (clear) clear.addEventListener("click", function () { saveCart([]); $("[data-clear-after]").hidden = true; });
+
+    // coming back from the payment page
+    var params = new URLSearchParams(location.search);
+    if (params.get("paid") === "1") {
+      saveCart([]);
+      var paid = $("[data-paid]", root); paid.hidden = false;
+      $("[data-order-ref]", root).textContent = params.get("order") || "";
+      paid.scrollIntoView({ block: "center" });
+    } else if (params.get("failed") === "1") {
+      $("[data-failed]", root).hidden = false;
+    }
     render();
+  }
+
+  function payByCard(fd, method, status) {
+    var btns = $$("#checkout-form [type=submit]");
+    btns.forEach(function (b) { b.disabled = true; });
+    status.className = "form-status ok";
+    status.textContent = T.paying;
+    var payload = {
+      lang: LANG, method: method,
+      items: getCart().map(function (i) { return { id: i.id, vi: i.vi, qty: i.qty }; }),
+      customer: {
+        name: fd.get("name"), phone: fd.get("phone"), email: fd.get("email"), zone: fd.get("zone"),
+        city: fd.get("city"), address: fd.get("address"), date: fd.get("date"), notes: fd.get("notes")
+      }
+    };
+    fetch(CFG.checkoutUrl, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) })
+      .then(function (r) { return r.json().then(function (d) { return { ok: r.ok, d: d }; }); })
+      .then(function (res) {
+        if (res.ok && res.d.url) { location.href = res.d.url; return; }
+        throw res.d.error || "error";
+      })
+      .catch(function (err) {
+        btns.forEach(function (b) { b.disabled = false; });
+        status.className = "form-status err";
+        status.textContent = err === "item_unavailable" ? T.unavailable : T.payError;
+      });
   }
 
   /* ---------- generic forms (contact / events / club / business) ---------- */
