@@ -1,0 +1,43 @@
+<!--
+path: /אירועים-אצלנו/
+title: אירועים אצלנו – אירועים קטנים במעדנייה בשילת
+description: ערבי גיבוש, ימי הולדת, שבע ברכות ופגישות עסקים ל־20–50 סועדים ברחבת המעדנייה של צרפתי בשילת. תפריט דגים מעושנים, כריכים וסלטים בכשרות מהדרין.
+hero_title: אירועים אצלנו
+hero_intro: אירועים קטנים של 20–50 סועדים, תחת כיפת השמיים, ברמה שלא הכרתם.
+active: /המעדנייה-שלנו/
+-->
+<section class="section">
+  <div class="wrap split">
+    <div>
+      <p class="lead">ברחבת המעדנייה בשילת אפשר לקיים אירועים קטנים: ערבי גיבוש, ימי הולדת, שבע ברכות, פגישות עסקים, ישיבות ועוד.</p>
+      <div class="prose">
+        <p>בתפריט האירועים: כריכים מגוונים, סלטי דגים מעושנים, דגים שלמים שיוצאים ישר מהמעשנה החמה וסלטים טריים.</p>
+        <ul>
+          <li>20–50 סועדים</li>
+          <li>כשרות מהדרין חבל מודיעין (אפשר להזמין גם מוצרים בכשרות בד״ץ העדה החרדית)</li>
+          <li>תפריט מותאם אישית לפי האירוע והתקציב</li>
+        </ul>
+      </div>
+    </div>
+    <div class="split-media">{{img:event-platter|מגשי אירוח לאירוע}}</div>
+  </div>
+</section>
+<section class="section section--sand">
+  <div class="narrow">
+    <form class="form-card" data-form="בקשה לאירוע במעדנייה" novalidate>
+      <h2>בואו נתכנן את האירוע שלכם</h2>
+      <p class="muted">השאירו פרטים ונחזור אליכם עם הצעה.</p>
+      <div class="form-grid two">
+        <div class="field"><label for="ev-name">שם *</label><input id="ev-name" name="name" type="text" autocomplete="name" required></div>
+        <div class="field"><label for="ev-phone">טלפון *</label><input id="ev-phone" name="phone" type="tel" autocomplete="tel" required></div>
+        <div class="field"><label for="ev-email">אימייל</label><input id="ev-email" name="email" type="email" autocomplete="email"></div>
+        <div class="field"><label for="ev-date">תאריך האירוע</label><input id="ev-date" name="event_date" type="date"></div>
+        <div class="field"><label for="ev-guests">כמות סועדים</label><input id="ev-guests" name="guests" type="number" min="10" max="80"></div>
+        <div class="field"><label for="ev-type">סוג האירוע</label><select id="ev-type" name="type"><option value="">בחרו…</option><option>יום הולדת</option><option>שבע ברכות</option><option>ערב גיבוש</option><option>פגישה עסקית</option><option>אחר</option></select></div>
+        <div class="field full"><label for="ev-msg">הודעה</label><textarea id="ev-msg" name="message"></textarea></div>
+      </div>
+      <button type="submit" class="btn btn--primary btn--block mt-2">שליחה</button>
+      <div class="form-status" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>

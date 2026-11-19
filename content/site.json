@@ -1,0 +1,75 @@
+{
+  "name": "צרפתי דגים מעושנים",
+  "legalName": "צרפתי מעושנים בע״מ",
+  "nameEn": "Sarfati Premium Smokehouse",
+  "url": "https://www.sarfati.co.il",
+  "tagline": "סלמון ודגים מעושנים בעבודת יד, בכשרות מהדרין",
+  "phone": "08-6825888",
+  "phoneIntl": "+97286825888",
+  "whatsapp": "972525199993",
+  "whatsappDisplay": "052-5199993",
+  "email": "sarfati.co.il@gmail.com",
+  "instagram": "https://www.instagram.com/sarfati_premium_smoke_house_/",
+  "facebook": "https://www.facebook.com/people/Sarfati-%D7%A6%D7%A8%D7%A4%D7%AA%D7%99-%D7%93%D7%92%D7%99%D7%9D-%D7%9E%D7%A2%D7%95%D7%A9%D7%A0%D7%99%D7%9D/61553348887741/",
+  "wolt": "https://wolt.com/he/isr/tel-aviv/venue/sarfati-premium-smokehouse",
+
+  "branches": [
+    {
+      "id": "shilat",
+      "name": "חנות המפעל והמעדנייה – שילת",
+      "address": "גלבוע 2, אזור התעשייה שילת",
+      "street": "גלבוע 2",
+      "city": "שילת",
+      "phone": "08-6825888",
+      "waze": "https://waze.com/ul?q=%D7%92%D7%9C%D7%91%D7%95%D7%A2%202%20%D7%90%D7%96%D7%95%D7%A8%20%D7%AA%D7%A2%D7%A9%D7%99%D7%99%D7%94%20%D7%A9%D7%99%D7%9C%D7%AA&navigate=yes",
+      "maps": "https://www.google.com/maps/search/?api=1&query=%D7%92%D7%9C%D7%91%D7%95%D7%A2%202%20%D7%A9%D7%99%D7%9C%D7%AA",
+      "hours": [
+        ["ראשון–שני", "10:00–16:00"],
+        ["שלישי", "09:00–18:00"],
+        ["רביעי–חמישי", "09:00–20:00"],
+        ["שישי (חורף)", "08:30–14:00"],
+        ["שישי (קיץ)", "08:30–15:00"]
+      ],
+      "schema": [
+        ["Su Mo", "10:00", "16:00"], ["Tu", "09:00", "18:00"], ["We Th", "09:00", "20:00"], ["Fr", "08:30", "14:00"]
+      ]
+    },
+    {
+      "id": "sarona",
+      "name": "סניף שרונה מרקט – תל אביב",
+      "address": "שרונה מרקט, מגן קלמן 3, תל אביב",
+      "street": "מגן קלמן 3",
+      "city": "תל אביב",
+      "phone": "03-5252552",
+      "waze": "https://waze.com/ul?q=%D7%A9%D7%A8%D7%95%D7%A0%D7%94%20%D7%9E%D7%A8%D7%A7%D7%98%20%D7%9E%D7%92%D7%9F%20%D7%A7%D7%9C%D7%9E%D7%9F%203%20%D7%AA%D7%9C%20%D7%90%D7%91%D7%99%D7%91&navigate=yes",
+      "maps": "https://www.google.com/maps/search/?api=1&query=%D7%A9%D7%A8%D7%95%D7%A0%D7%94%20%D7%9E%D7%A8%D7%A7%D7%98%20%D7%AA%D7%9C%20%D7%90%D7%91%D7%99%D7%91",
+      "hours": [
+        ["ראשון", "09:30–21:00"],
+        ["שני–רביעי", "09:30–21:30"],
+        ["חמישי", "09:30–22:30"],
+        ["שישי", "09:00–15:30"]
+      ],
+      "schema": [
+        ["Su", "09:30", "21:00"], ["Mo Tu We", "09:30", "21:30"], ["Th", "09:30", "22:30"], ["Fr", "09:00", "15:30"]
+      ]
+    }
+  ],
+  "officeHours": "ראשון–חמישי 07:00–16:00",
+
+  "shipping": {
+    "minOrder": 350,
+    "fee": 35,
+    "freeOver": 550,
+    "cutoff": "עד 12:00 ביום שלפני המשלוח",
+    "zones": [
+      { "id": "south", "day": "שני (אחת לשבועיים)", "areas": "אשדוד, אשקלון, קריית גת והסביבה" },
+      { "id": "sharon", "day": "שלישי", "areas": "נתניה, רעננה, הרצליה, רמת השרון, הוד השרון, בני ברק, גבעת שמואל, פתח תקווה, סביון, רמת גן" },
+      { "id": "jerusalem", "day": "רביעי", "areas": "ירושלים והסביבה" },
+      { "id": "telaviv", "day": "חמישי", "areas": "תל אביב–יפו" },
+      { "id": "other", "day": "בתיאום טלפוני", "areas": "כל אזור אחר בארץ" }
+    ]
+  },
+
+  "formEndpoint": "",
+  "formAccessKey": ""
+}

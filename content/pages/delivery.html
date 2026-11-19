@@ -1,0 +1,48 @@
+<!--
+path: /להיכן-אנו-מספקים/
+title: משלוחים – ימי חלוקה ואזורי משלוח
+description: משלוחים בקירור עד הבית: ירושלים, תל אביב, השרון, גוש דן והדרום. מינימום הזמנה, דמי משלוח, משלוח חינם ואיסוף עצמי משילת ומשרונה מרקט.
+hero_title: משלוחים ואיסוף עצמי
+hero_intro: הדגים יוצאים אליכם בקירור, ישר מהמעשנה – בימי החלוקה הקבועים של כל אזור.
+-->
+<section class="section">
+  <div class="wrap split" style="align-items:start">
+    <div>
+      <h2>ימי החלוקה שלנו</h2>
+      {{zones}}
+      <p class="small muted mt-2">באזור הדרום החלוקה מתבצעת אחת לשבועיים – מומלץ לברר מראש באיזה שבוע. לכל אזור אחר: <a href="tel:{{phoneIntl}}">{{phone}}</a>.</p>
+    </div>
+    <div class="stack">
+      <div class="form-card">
+        <h3>תנאי משלוח</h3>
+        <ul class="trust-list" style="color:inherit">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg> מינימום הזמנה למשלוח: <strong>{{minOrder}}</strong></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg> דמי משלוח: <strong>{{fee}}</strong></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg> משלוח חינם בהזמנה מעל <strong>{{freeOver}}</strong></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg> מזמינים <strong>{{cutoff}}</strong></li>
+        </ul>
+        <a class="btn btn--primary btn--block mt-2" href="/shop/">להזמנה אונליין</a>
+      </div>
+      <div class="split-media landscape">{{img:delivery-van|רכב המשלוחים הממוזג של צרפתי}}</div>
+    </div>
+  </div>
+</section>
+<section class="section section--sand">
+  <div class="wrap">
+    <h2>מעדיפים לאסוף?</h2>
+    <div class="grid grid-2 mt-2">
+      <div class="form-card"><h3>חנות המפעל – שילת</h3><p>{{address:shilat}}</p>{{hours:shilat}}<a class="btn btn--ghost btn--sm mt-2" href="{{waze:shilat}}" target="_blank" rel="noopener">ניווט בוויז</a></div>
+      <div class="form-card"><h3>שרונה מרקט – תל אביב</h3><p>{{address:sarona}}</p>{{hours:sarona}}<a class="btn btn--ghost btn--sm mt-2" href="{{waze:sarona}}" target="_blank" rel="noopener">ניווט בוויז</a></div>
+    </div>
+    <p class="mt-3">בתל אביב, הרצליה והסביבה? אפשר להזמין גם <a href="/צרפתי-משלוחים-בוולט/">משלוח מהיר בוולט</a> מהסניף בשרונה מרקט.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="narrow faq">
+    <h2>שאלות נפוצות</h2>
+    <details><summary>איך המוצרים נשמרים קרים בדרך?</summary><div>ההזמנות נארזות בקפידה ויוצאות ברכב משלוחים ממוזג ביום החלוקה של האזור שלכם.</div></details>
+    <details><summary>איך משלמים?</summary><div>אחרי ששלחתם את ההזמנה, נציג חוזר אליכם לאישור הזמינות והמשקל הסופי ולתשלום (בטלפון / אמצעי תשלום שיתואם מולכם).</div></details>
+    <details><summary>למה המחיר הסופי יכול להשתנות?</summary><div>חלק מהמוצרים (פילה שלם, דגים בעישון חם וכו׳) נמכרים לפי משקל. כל דג שוקל קצת אחרת, ולכן החיוב הוא לפי השקילה בפועל – ונאשר אותו איתכם לפני התשלום.</div></details>
+    <details><summary>כמה זמן המוצרים מחזיקים?</summary><div>תאריך התפוגה מופיע על כל אריזה. דגים מעושנים ארוזים בוואקום נשמרים במקרר בטמפרטורה של 0–4 מעלות; לאחר הפתיחה מומלץ לצרוך תוך מספר ימים.</div></details>
+  </div>
+</section>
