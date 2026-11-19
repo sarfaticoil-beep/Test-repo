@@ -2,7 +2,7 @@ name: Build and deploy site
 
 on:
   push:
-    branches: [main]
+    branches: [main, claude/sarfati-website-review-cwxwj9]
   workflow_dispatch:
 
 permissions:
