@@ -1,0 +1,42 @@
+<!--
+title: Événements à l'épicerie fine Sarfati de Shilat
+description: Soirées d'équipe, anniversaires, sheva brakhot et réunions d'affaires pour 20 à 50 personnes à l'épicerie fine Sarfati de Shilat. Poissons fumés, sandwichs et salades, casher mehadrin.
+hero_title: Événements chez nous
+hero_intro: De petits événements de 20 à 50 personnes, en plein air, à un niveau que vous ne connaissiez pas.
+active: deli
+-->
+<section class="section">
+  <div class="wrap split">
+    <div>
+      <p class="lead">La terrasse de notre épicerie fine à Shilat accueille de petits événements : soirées d'équipe, anniversaires, sheva brakhot, réunions d'affaires et plus encore.</p>
+      <div class="prose">
+        <p>Au menu : sandwichs variés, salades de poisson fumé, poissons entiers tout juste sortis du fumoir chaud et salades fraîches.</p>
+        <ul>
+          <li>20 à 50 personnes</li>
+          <li>Casher Mehadrin Hevel Modiin (possibilité de commander des produits Badatz Eda Haredit)</li>
+          <li>Un menu adapté à votre événement et à votre budget</li>
+        </ul>
+      </div>
+    </div>
+    <div class="split-media">{{img:event-platter|Plateaux pour un événement}}</div>
+  </div>
+</section>
+<section class="section section--sand">
+  <div class="narrow">
+    <form class="form-card" data-form="Demande d'événement" novalidate>
+      <h2>Organisons votre événement</h2>
+      <p class="muted">Laissez vos coordonnées, nous revenons vers vous avec une proposition.</p>
+      <div class="form-grid two">
+        <div class="field"><label for="ev-name">Nom *</label><input id="ev-name" name="name" type="text" autocomplete="name" required></div>
+        <div class="field"><label for="ev-phone">Téléphone *</label><input id="ev-phone" name="phone" type="tel" autocomplete="tel" required></div>
+        <div class="field"><label for="ev-email">E-mail</label><input id="ev-email" name="email" type="email" autocomplete="email"></div>
+        <div class="field"><label for="ev-date">Date de l'événement</label><input id="ev-date" name="event_date" type="date"></div>
+        <div class="field"><label for="ev-guests">Nombre de convives</label><input id="ev-guests" name="guests" type="number" min="10" max="80"></div>
+        <div class="field"><label for="ev-type">Type d'événement</label><select id="ev-type" name="type"><option value="">Choisir…</option><option>Anniversaire</option><option>Sheva brakhot</option><option>Soirée d'équipe</option><option>Réunion d'affaires</option><option>Autre</option></select></div>
+        <div class="field full"><label for="ev-msg">Message</label><textarea id="ev-msg" name="message"></textarea></div>
+      </div>
+      <button type="submit" class="btn btn--primary btn--block mt-2">Envoyer</button>
+      <div class="form-status" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>

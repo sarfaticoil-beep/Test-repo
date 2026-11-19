@@ -1,6 +1,6 @@
 # Sarfati – אתר צרפתי דגים מעושנים
 
-A fast, static rebuild of [sarfati.co.il](https://www.sarfati.co.il) (Hebrew, RTL) that can be hosted for free.
+A fast, static rebuild of [sarfati.co.il](https://www.sarfati.co.il) that can be hosted for free, in five languages: Hebrew (site root), English `/en/`, French `/fr/`, Russian `/ru/` and Arabic `/ar/`.
 No WordPress, no plugins, no database. The build uses only the Python standard library.
 
 ## What's inside
@@ -8,9 +8,11 @@ No WordPress, no plugins, no database. The build uses only the Python standard l
 | Path | What it is |
 |---|---|
 | `content/site.json` | **Business details in one place**: phones, WhatsApp, email, addresses, opening hours, delivery days, shipping rules. Change it here and every page updates. |
-| `content/pages/*.html` | Text of the regular pages (home, story, deli & menu, events, delivery, kosher, business, press, gallery, contact, club, accessibility). |
+| `content/pages/<lang>/*.html` | Text of the regular pages in each language (home, story, deli & menu, events, delivery, kosher, business, press, gallery, contact, club, accessibility). |
+| `content/i18n/<lang>.json` | Menu, button, cart and form texts in each language. |
+| `content/i18n/products.<lang>.json` | Product names and descriptions in English, French, Russian and Arabic (prices and stock stay in `products.json`). |
 | `assets/data/products.json` | The product catalogue (91 products: name, price, weight options, stock, categories, kosher, photos, description). |
-| `assets/data/posts.json` | The 12 blog posts. |
+| `assets/data/posts.json` | The 12 blog posts (Hebrew only). |
 | `content/terms.txt` | Terms of use / privacy policy text. |
 | `assets/` | CSS, JavaScript, optimized WebP images. |
 | `tools/build.py` | Builds the site into `_site/`. |
@@ -27,6 +29,7 @@ cd _site && python3 -m http.server 8000   # open http://localhost:8000
 
 - **Change a price / mark out of stock:** edit `assets/data/products.json` (`price`, `inStock`, or a variant's `price`/`inStock`).
 - **Change hours, phone, delivery days, minimum order, free-shipping threshold:** edit `content/site.json`.
+- **Add a new product:** add it to `assets/data/products.json`, then add its name and description to each `content/i18n/products.<lang>.json` (the build stops if one is missing).
 - **Add a product photo:** put a `.webp`/`.jpg` in `assets/img/p/` and add its path to the product's `images` list.
 
 On GitHub you can edit these files straight in the browser. Each change to `main` redeploys the site automatically.

@@ -1,0 +1,41 @@
+<!--
+title: Contact – téléphone, adresse et horaires
+description: Contactez Sarfati : boutique d'usine à Shilat (08-6825888) et comptoir de Sarona Market à Tel-Aviv (03-5252552). Horaires, itinéraire et formulaire de contact.
+hero_title: Nous contacter
+hero_intro: Nous sommes là pour vous aider – par téléphone, sur WhatsApp ou via le formulaire.
+schema: business
+-->
+<section class="section">
+  <div class="wrap split" style="align-items:start">
+    <div class="stack">
+      <div class="form-card contact-card">
+        <h2 style="font-size:1.4rem">{{branch:shilat}}</h2>
+        <div class="row">{{icon:pin}}<a href="{{waze:shilat}}" target="_blank" rel="noopener">{{address:shilat}}</a></div>
+        <div class="row">{{icon:phone}}<a href="tel:{{phoneIntl}}">{{phone}}</a></div>
+        <div class="row">{{icon:mail}}<a href="mailto:{{email}}">{{email}}</a></div>
+        <h3 style="font-size:1.05rem;margin-top:8px">Horaires de la boutique</h3>
+        {{hours:shilat}}
+        <p class="small muted mb-0">Horaires du bureau : {{officeHours}}</p>
+      </div>
+      <div class="form-card contact-card">
+        <h2 style="font-size:1.4rem">{{branch:sarona}}</h2>
+        <div class="row">{{icon:pin}}<a href="{{waze:sarona}}" target="_blank" rel="noopener">{{address:sarona}}</a></div>
+        <div class="row">{{icon:phone}}<a href="tel:+97235252552">03-5252552</a></div>
+        {{hours:sarona}}
+      </div>
+    </div>
+    <form class="form-card" data-form="Message depuis le site" novalidate>
+      <h2>Envoyez-nous un message</h2>
+      <div class="form-grid">
+        <div class="field"><label for="c-name">Nom *</label><input id="c-name" name="name" type="text" autocomplete="name" required></div>
+        <div class="field"><label for="c-phone">Téléphone *</label><input id="c-phone" name="phone" type="tel" autocomplete="tel" required></div>
+        <div class="field"><label for="c-email">E-mail</label><input id="c-email" name="email" type="email" autocomplete="email"></div>
+        <div class="field"><label for="c-topic">Objet</label><select id="c-topic" name="topic"><option>Demande générale</option><option>Commande en cours</option><option>Question sur un produit</option><option>Annulation de commande</option></select></div>
+        <div class="field"><label for="c-msg">Message *</label><textarea id="c-msg" name="message" required></textarea></div>
+      </div>
+      <button type="submit" class="btn btn--primary btn--block mt-2">Envoyer</button>
+      <p class="small muted mt-2 mb-0">Ou directement <a href="https://wa.me/{{whatsapp}}">sur WhatsApp {{whatsappDisplay}}</a></p>
+      <div class="form-status" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>

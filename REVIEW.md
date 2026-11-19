@@ -31,7 +31,7 @@ The whole site was crawled: 138 Hebrew pages, 91 products with 103 weight option
 - Some variations have no price (₪0) and appear as selectable options.
 - Three products have the same name: "מגש סלמון מעושן פרוס דק" (IDs 1621, 1567 and 1102), two of them at ₪469.
 - "מארז ל2 צנצנות דגים מעושנים" costs **₪5**, which is probably a mistake.
-- The English and French versions (`/en/`, `/fr/`) are mostly untranslated. They now redirect to the Hebrew site.
+- The English and French versions (`/en/`, `/fr/`) were poor machine translations ("French Fish" for Sarfati, "Cash" for kosher). They have been replaced by full hand translations, and Russian and Arabic were added.
 
 **SEO and accessibility**
 - Product pages had no structured data for prices. The new site adds `Product`, `Breadcrumb`, `LocalBusiness` (both branches with hours) and `BlogPosting` data for Google, plus a sitemap.

@@ -1,0 +1,47 @@
+<!--
+title: التوصيل – الأيام والمناطق
+description: توصيل مبرَّد حتى البيت: القدس، تل أبيب، الشارون، غوش دان والجنوب. الحد الأدنى للطلب، رسوم التوصيل، التوصيل المجاني والاستلام الذاتي من شيلات وسارونا ماركت.
+hero_title: التوصيل والاستلام الذاتي
+hero_intro: تخرج الأسماك من المدخنة مبرَّدة، في يوم التوصيل الثابت لكل منطقة.
+-->
+<section class="section">
+  <div class="wrap split" style="align-items:start">
+    <div>
+      <h2>أيام التوصيل</h2>
+      {{zones}}
+      <p class="small muted mt-2">في منطقة الجنوب يتم التوصيل مرة كل أسبوعين – يُنصح بالتحقّق مسبقًا من الأسبوع. لأي منطقة أخرى: <a href="tel:{{phoneIntl}}">{{phone}}</a>.</p>
+    </div>
+    <div class="stack">
+      <div class="form-card">
+        <h3>شروط التوصيل</h3>
+        <ul class="trust-list" style="color:inherit">
+          <li>{{icon:check}} الحد الأدنى للطلب للتوصيل: <strong>{{minOrder}}</strong></li>
+          <li>{{icon:check}} رسوم التوصيل: <strong>{{fee}}</strong></li>
+          <li>{{icon:check}} توصيل مجاني للطلبات فوق <strong>{{freeOver}}</strong></li>
+          <li>{{icon:check}} يجب الطلب <strong>{{cutoff}}</strong></li>
+        </ul>
+        <a class="btn btn--primary btn--block mt-2" href="{{link:shop}}">اطلبوا أونلاين</a>
+      </div>
+      <div class="split-media landscape">{{img:delivery-van|سيارة التوصيل المبرّدة لصرفاتي}}</div>
+    </div>
+  </div>
+</section>
+<section class="section section--sand">
+  <div class="wrap">
+    <h2>تفضّلون الاستلام بأنفسكم؟</h2>
+    <div class="grid grid-2 mt-2">
+      <div class="form-card"><h3>{{branch:shilat}}</h3><p>{{address:shilat}}</p>{{hours:shilat}}<a class="btn btn--ghost btn--sm mt-2" href="{{waze:shilat}}" target="_blank" rel="noopener">الملاحة عبر Waze</a></div>
+      <div class="form-card"><h3>{{branch:sarona}}</h3><p>{{address:sarona}}</p>{{hours:sarona}}<a class="btn btn--ghost btn--sm mt-2" href="{{waze:sarona}}" target="_blank" rel="noopener">الملاحة عبر Waze</a></div>
+    </div>
+    <p class="mt-3">في تل أبيب أو هرتسليا أو بالقرب منهما؟ يمكنكم أيضًا طلب <a href="{{link:wolt}}">توصيل سريع عبر Wolt</a> من فرعنا في سارونا ماركت.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="narrow faq">
+    <h2>أسئلة شائعة</h2>
+    <details><summary>كيف تبقى المنتجات باردة في الطريق؟</summary><div>تُغلَّف الطلبات بعناية وتخرج في سيارة توصيل مبرّدة في يوم التوصيل الخاص بمنطقتكم.</div></details>
+    <details><summary>كيف أدفع؟</summary><div>بعد إرسال الطلب، نعاود الاتصال بكم لتأكيد التوفّر والوزن النهائي ولإتمام الدفع (هاتفيًا أو بوسيلة نتّفق عليها معكم).</div></details>
+    <details><summary>لماذا قد يتغيّر السعر النهائي؟</summary><div>بعض المنتجات (فيليه كامل، أسماك مدخّنة على الساخن وغيرها) تُباع بالوزن. لكل سمكة وزن مختلف قليلًا، لذا تُحاسَبون حسب الوزن الفعلي – ونؤكده معكم قبل الدفع.</div></details>
+    <details><summary>كم تدوم المنتجات؟</summary><div>تاريخ الصلاحية مطبوع على كل عبوة. الأسماك المدخّنة المغلّفة بالفراغ تُحفظ في الثلاجة على 0–4 درجات؛ بعد الفتح يُنصح باستهلاكها خلال أيام قليلة.</div></details>
+  </div>
+</section>

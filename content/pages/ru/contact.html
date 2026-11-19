@@ -1,0 +1,41 @@
+<!--
+title: Контакты – телефон, адрес и часы работы
+description: Свяжитесь с Sarfati: фирменный магазин в Шилате (08-6825888) и точка на Сарона Маркет в Тель-Авиве (03-5252552). Часы работы, маршрут и форма обратной связи.
+hero_title: Контакты
+hero_intro: Будем рады помочь – по телефону, в WhatsApp или через форму.
+schema: business
+-->
+<section class="section">
+  <div class="wrap split" style="align-items:start">
+    <div class="stack">
+      <div class="form-card contact-card">
+        <h2 style="font-size:1.4rem">{{branch:shilat}}</h2>
+        <div class="row">{{icon:pin}}<a href="{{waze:shilat}}" target="_blank" rel="noopener">{{address:shilat}}</a></div>
+        <div class="row">{{icon:phone}}<a href="tel:{{phoneIntl}}">{{phone}}</a></div>
+        <div class="row">{{icon:mail}}<a href="mailto:{{email}}">{{email}}</a></div>
+        <h3 style="font-size:1.05rem;margin-top:8px">Часы работы магазина</h3>
+        {{hours:shilat}}
+        <p class="small muted mb-0">Часы работы офиса: {{officeHours}}</p>
+      </div>
+      <div class="form-card contact-card">
+        <h2 style="font-size:1.4rem">{{branch:sarona}}</h2>
+        <div class="row">{{icon:pin}}<a href="{{waze:sarona}}" target="_blank" rel="noopener">{{address:sarona}}</a></div>
+        <div class="row">{{icon:phone}}<a href="tel:+97235252552">03-5252552</a></div>
+        {{hours:sarona}}
+      </div>
+    </div>
+    <form class="form-card" data-form="Обращение с сайта" novalidate>
+      <h2>Напишите нам</h2>
+      <div class="form-grid">
+        <div class="field"><label for="c-name">Имя *</label><input id="c-name" name="name" type="text" autocomplete="name" required></div>
+        <div class="field"><label for="c-phone">Телефон *</label><input id="c-phone" name="phone" type="tel" autocomplete="tel" required></div>
+        <div class="field"><label for="c-email">E-mail</label><input id="c-email" name="email" type="email" autocomplete="email"></div>
+        <div class="field"><label for="c-topic">Тема обращения</label><select id="c-topic" name="topic"><option>Общий вопрос</option><option>Существующий заказ</option><option>Вопрос о товаре</option><option>Отмена заказа</option></select></div>
+        <div class="field"><label for="c-msg">Сообщение *</label><textarea id="c-msg" name="message" required></textarea></div>
+      </div>
+      <button type="submit" class="btn btn--primary btn--block mt-2">Отправить</button>
+      <p class="small muted mt-2 mb-0">Или напрямую <a href="https://wa.me/{{whatsapp}}">в WhatsApp {{whatsappDisplay}}</a></p>
+      <div class="form-status" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>

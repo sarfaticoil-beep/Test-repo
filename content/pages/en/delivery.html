@@ -1,0 +1,47 @@
+<!--
+title: Delivery – days and areas
+description: Chilled home delivery to Jerusalem, Tel Aviv, the Sharon, Gush Dan and the south. Minimum order, delivery fee, free delivery and pickup from Shilat and Sarona Market.
+hero_title: Delivery and pickup
+hero_intro: Your fish leaves the smokehouse chilled, on each area's regular delivery day.
+-->
+<section class="section">
+  <div class="wrap split" style="align-items:start">
+    <div>
+      <h2>Our delivery days</h2>
+      {{zones}}
+      <p class="small muted mt-2">In the south we deliver every other week – please check which week in advance. For any other area: <a href="tel:{{phoneIntl}}">{{phone}}</a>.</p>
+    </div>
+    <div class="stack">
+      <div class="form-card">
+        <h3>Delivery terms</h3>
+        <ul class="trust-list" style="color:inherit">
+          <li>{{icon:check}} Minimum order for delivery: <strong>{{minOrder}}</strong></li>
+          <li>{{icon:check}} Delivery fee: <strong>{{fee}}</strong></li>
+          <li>{{icon:check}} Free delivery on orders over <strong>{{freeOver}}</strong></li>
+          <li>{{icon:check}} Order <strong>{{cutoff}}</strong></li>
+        </ul>
+        <a class="btn btn--primary btn--block mt-2" href="{{link:shop}}">Order online</a>
+      </div>
+      <div class="split-media landscape">{{img:delivery-van|Sarfati's refrigerated delivery van}}</div>
+    </div>
+  </div>
+</section>
+<section class="section section--sand">
+  <div class="wrap">
+    <h2>Prefer to pick up?</h2>
+    <div class="grid grid-2 mt-2">
+      <div class="form-card"><h3>{{branch:shilat}}</h3><p>{{address:shilat}}</p>{{hours:shilat}}<a class="btn btn--ghost btn--sm mt-2" href="{{waze:shilat}}" target="_blank" rel="noopener">Navigate with Waze</a></div>
+      <div class="form-card"><h3>{{branch:sarona}}</h3><p>{{address:sarona}}</p>{{hours:sarona}}<a class="btn btn--ghost btn--sm mt-2" href="{{waze:sarona}}" target="_blank" rel="noopener">Navigate with Waze</a></div>
+    </div>
+    <p class="mt-3">In Tel Aviv, Herzliya or nearby? You can also order <a href="{{link:wolt}}">fast delivery on Wolt</a> from our Sarona Market branch.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="narrow faq">
+    <h2>Frequently asked questions</h2>
+    <details><summary>How do the products stay cold on the way?</summary><div>Orders are carefully packed and leave in a refrigerated delivery van on your area's delivery day.</div></details>
+    <details><summary>How do I pay?</summary><div>Once you've sent your order, we call you back to confirm availability and the final weight, and to take payment (by phone or another method agreed with you).</div></details>
+    <details><summary>Why can the final price change?</summary><div>Some products (whole fillets, hot-smoked fish, etc.) are sold by weight. Every fish weighs a little differently, so you are charged by actual weight – and we confirm it with you before payment.</div></details>
+    <details><summary>How long do the products keep?</summary><div>The use-by date is printed on every pack. Vacuum-packed smoked fish keeps in the fridge at 0–4°C; once opened, eat within a few days.</div></details>
+  </div>
+</section>

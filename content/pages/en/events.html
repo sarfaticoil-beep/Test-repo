@@ -1,0 +1,42 @@
+<!--
+title: Events at the Sarfati deli in Shilat
+description: Team evenings, birthdays, sheva brachot and business meetings for 20–50 guests at the Sarfati deli in Shilat. Smoked fish, sandwiches and salads, kosher mehadrin.
+hero_title: Events at the deli
+hero_intro: Small events for 20–50 guests, in the open air, at a level you've never experienced.
+active: deli
+-->
+<section class="section">
+  <div class="wrap split">
+    <div>
+      <p class="lead">Our deli terrace in Shilat hosts small events: team evenings, birthdays, sheva brachot, business meetings and more.</p>
+      <div class="prose">
+        <p>On the event menu: a variety of sandwiches, smoked fish salads, whole fish straight from the hot smoker, and fresh salads.</p>
+        <ul>
+          <li>20–50 guests</li>
+          <li>Kosher Mehadrin Hevel Modiin (products with Badatz Eda Haredit kashrut can also be ordered)</li>
+          <li>A menu tailored to your event and budget</li>
+        </ul>
+      </div>
+    </div>
+    <div class="split-media">{{img:event-platter|Event platters}}</div>
+  </div>
+</section>
+<section class="section section--sand">
+  <div class="narrow">
+    <form class="form-card" data-form="Event enquiry" novalidate>
+      <h2>Let's plan your event</h2>
+      <p class="muted">Leave your details and we'll get back to you with an offer.</p>
+      <div class="form-grid two">
+        <div class="field"><label for="ev-name">Name *</label><input id="ev-name" name="name" type="text" autocomplete="name" required></div>
+        <div class="field"><label for="ev-phone">Phone *</label><input id="ev-phone" name="phone" type="tel" autocomplete="tel" required></div>
+        <div class="field"><label for="ev-email">Email</label><input id="ev-email" name="email" type="email" autocomplete="email"></div>
+        <div class="field"><label for="ev-date">Event date</label><input id="ev-date" name="event_date" type="date"></div>
+        <div class="field"><label for="ev-guests">Number of guests</label><input id="ev-guests" name="guests" type="number" min="10" max="80"></div>
+        <div class="field"><label for="ev-type">Type of event</label><select id="ev-type" name="type"><option value="">Choose…</option><option>Birthday</option><option>Sheva brachot</option><option>Team evening</option><option>Business meeting</option><option>Other</option></select></div>
+        <div class="field full"><label for="ev-msg">Message</label><textarea id="ev-msg" name="message"></textarea></div>
+      </div>
+      <button type="submit" class="btn btn--primary btn--block mt-2">Send</button>
+      <div class="form-status" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>

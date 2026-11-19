@@ -422,3 +422,33 @@ hr.sep { border: 0; height: 1px; background: var(--line); margin: 40px 0; }
 @media print { .site-header, .site-footer, .wa-float, .topbar { display: none; } body { background: #fff; } }
 .btn svg { width: 22px; height: 22px; flex-shrink: 0; }
 body:has([data-cart-page]) .wa-float { display: none; }
+
+/* ---------- Multilingual ---------- */
+:root:lang(ru) { --serif: "Noto Serif", Georgia, serif; --sans: "Noto Sans", "Segoe UI", Arial, sans-serif; }
+:root:lang(ar) { --serif: "Noto Naskh Arabic", "Noto Sans Arabic", serif; --sans: "Noto Sans Arabic", "Segoe UI", Tahoma, sans-serif; }
+:lang(ar) .eyebrow { letter-spacing: 0; text-transform: none; }
+[dir="ltr"] .link-arrow::after { content: "→"; }
+[dir="ltr"] .link-arrow:hover::after { transform: translateX(4px); }
+[dir="ltr"] .page-hero::after { transform: none; }
+
+.lang-switch { position: relative; }
+.lang-switch summary {
+  list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; height: 44px; padding: 0 10px;
+  border-radius: 999px; font-weight: 700; font-size: .85rem; color: var(--navy-deep);
+}
+.lang-switch summary::-webkit-details-marker { display: none; }
+.lang-switch summary:hover, .lang-switch[open] summary { background: var(--sand); }
+.lang-switch summary svg { width: 20px; height: 20px; }
+.lang-switch ul {
+  position: absolute; top: calc(100% + 6px); inset-inline-end: 0; z-index: 50; list-style: none; margin: 0; padding: 6px;
+  min-width: 150px; background: var(--paper); border: 1px solid var(--line); border-radius: 12px; box-shadow: var(--shadow-lg);
+}
+.lang-switch a { display: block; padding: 8px 12px; border-radius: 8px; text-decoration: none; color: var(--navy-ink); font-weight: 600; }
+.lang-switch a:hover { background: var(--sand); }
+.lang-switch a[aria-current="true"] { background: var(--navy); color: #fff; }
+.drawer-langs { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 14px 0 0; font-size: .95rem; }
+.drawer-langs svg { width: 18px; height: 18px; color: var(--gold-deep); }
+.drawer-langs a { font-weight: 600; }
+.crumbs-light { color: var(--muted); padding-top: 18px; }
+.crumbs-light a { color: var(--navy); }
+@media (max-width: 420px) { .lang-switch summary span { display: none; } .lang-switch summary { padding: 0 8px; } }

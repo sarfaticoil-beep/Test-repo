@@ -1,0 +1,42 @@
+<!--
+title: المناسبات في ديلي صرفاتي في شيلات
+description: أمسيات فرق العمل وأعياد الميلاد و«شيفع براخوت» واجتماعات العمل لـ20–50 ضيفًا في ديلي صرفاتي في شيلات. أسماك مدخّنة وسندويشات وسلطات بكشروت مهدرين.
+hero_title: المناسبات لدينا
+hero_intro: مناسبات صغيرة لـ20–50 ضيفًا تحت السماء المفتوحة، بمستوى لم تعرفوه من قبل.
+active: deli
+-->
+<section class="section">
+  <div class="wrap split">
+    <div>
+      <p class="lead">في ساحة الديلي في شيلات يمكن إقامة مناسبات صغيرة: أمسيات فرق العمل، أعياد الميلاد، «شيفع براخوت»، اجتماعات العمل وغيرها.</p>
+      <div class="prose">
+        <p>في قائمة المناسبات: سندويشات متنوّعة، سلطات أسماك مدخّنة، أسماك كاملة خارجة للتوّ من المدخنة الساخنة وسلطات طازجة.</p>
+        <ul>
+          <li>20–50 ضيفًا</li>
+          <li>كشروت مهدرين حيفيل موديعين (يمكن أيضًا طلب منتجات بكشروت بداتس عيدا حريديت)</li>
+          <li>قائمة مُعدّة حسب المناسبة والميزانية</li>
+        </ul>
+      </div>
+    </div>
+    <div class="split-media">{{img:event-platter|صواني ضيافة لمناسبة}}</div>
+  </div>
+</section>
+<section class="section section--sand">
+  <div class="narrow">
+    <form class="form-card" data-form="طلب مناسبة في الديلي" novalidate>
+      <h2>لنخطّط لمناسبتكم</h2>
+      <p class="muted">اتركوا التفاصيل وسنعود إليكم بعرض.</p>
+      <div class="form-grid two">
+        <div class="field"><label for="ev-name">الاسم *</label><input id="ev-name" name="name" type="text" autocomplete="name" required></div>
+        <div class="field"><label for="ev-phone">الهاتف *</label><input id="ev-phone" name="phone" type="tel" autocomplete="tel" required></div>
+        <div class="field"><label for="ev-email">البريد الإلكتروني</label><input id="ev-email" name="email" type="email" autocomplete="email"></div>
+        <div class="field"><label for="ev-date">تاريخ المناسبة</label><input id="ev-date" name="event_date" type="date"></div>
+        <div class="field"><label for="ev-guests">عدد الضيوف</label><input id="ev-guests" name="guests" type="number" min="10" max="80"></div>
+        <div class="field"><label for="ev-type">نوع المناسبة</label><select id="ev-type" name="type"><option value="">اختاروا…</option><option>عيد ميلاد</option><option>شيفع براخوت</option><option>أمسية فريق عمل</option><option>اجتماع عمل</option><option>أخرى</option></select></div>
+        <div class="field full"><label for="ev-msg">رسالة</label><textarea id="ev-msg" name="message"></textarea></div>
+      </div>
+      <button type="submit" class="btn btn--primary btn--block mt-2">إرسال</button>
+      <div class="form-status" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>

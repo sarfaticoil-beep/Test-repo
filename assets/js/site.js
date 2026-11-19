@@ -1,15 +1,21 @@
-/* Sarfati site script: navigation, cart, checkout, forms, shop filters. No dependencies. */
+/* Sarfati site script: navigation, cart, checkout, forms, shop filters. No dependencies. Multilingual. */
 (function () {
   "use strict";
   var CFG = window.SARFATI || {};
-  var BASE = CFG.base || "";
-  var CART_KEY = "sarfati_cart_v1";
+  var T = CFG.t || {};
+  var LANG = CFG.lang || "he";
+  var CART_KEY = "sarfati_cart_v2";
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
 
+  function tr(key, vars) {
+    var s = T[key] || "";
+    Object.keys(vars || {}).forEach(function (k) { s = s.split("{" + k + "}").join(vars[k]); });
+    return s;
+  }
   function money(n) {
     var v = Math.round(n * 100) / 100;
-    return "₪" + (v % 1 === 0 ? v.toLocaleString("he-IL") : v.toLocaleString("he-IL", { minimumFractionDigits: 2, maximumFractionDigits: 2 }));
+    return "₪" + (v % 1 === 0 ? v.toLocaleString("en-US") : v.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }));
   }
   function esc(s) {
     return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
@@ -37,14 +43,15 @@
     $$(".cart-count").forEach(function (el) { el.textContent = n; el.setAttribute("data-count", n); });
   }
 
+  // item: {id, vi, name, he, variant, heVariant, price, image, url}
   function addToCart(item, qty) {
     var cart = getCart().slice();
-    var key = item.id + "|" + (item.variant || "");
+    var key = item.id + "|" + (item.vi == null ? "" : item.vi);
     var found = cart.find(function (i) { return i.key === key; });
     if (found) { found.qty = Math.min(99, found.qty + qty); found.price = item.price; }
-    else cart.push({ key: key, id: item.id, name: item.name, variant: item.variant || "", price: item.price, image: item.image || "", url: item.url || "", qty: qty });
+    else cart.push(Object.assign({ key: key, qty: qty }, item));
     saveCart(cart);
-    toast("נוסף לסל: " + item.name + (item.variant ? " (" + item.variant + ")" : ""));
+    toast(T.added + item.name + (item.variant ? " (" + item.variant + ")" : ""));
   }
 
   var toastTimer;
@@ -82,6 +89,14 @@
     document.addEventListener("keydown", function (e) { if (e.key === "Escape" && drawer.classList.contains("open")) close(); });
   }
 
+  /* ---------- language menu: close on outside click / Esc ---------- */
+  function initLangSwitch() {
+    var d = $(".lang-switch");
+    if (!d) return;
+    document.addEventListener("click", function (e) { if (d.open && !d.contains(e.target)) d.open = false; });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && d.open) { d.open = false; d.querySelector("summary").focus(); } });
+  }
+
   /* ---------- add-to-cart buttons on cards ---------- */
   function initCardButtons() {
     document.addEventListener("click", function (e) {
@@ -89,8 +104,8 @@
       if (!b) return;
       e.preventDefault();
       addToCart({
-        id: +b.dataset.add, name: b.dataset.name, price: +b.dataset.price,
-        image: b.dataset.image, url: b.dataset.url, variant: b.dataset.variant || ""
+        id: +b.dataset.add, vi: null, name: b.dataset.name, he: b.dataset.he, price: +b.dataset.price,
+        image: b.dataset.image, url: b.dataset.url, variant: "", heVariant: ""
       }, 1);
     });
   }
@@ -106,15 +121,15 @@
     function current() {
       if (sel) {
         var o = sel.options[sel.selectedIndex];
-        return { price: +o.dataset.price, variant: o.value, inStock: o.dataset.stock !== "0" };
+        return { vi: +o.value, price: +o.dataset.price, variant: o.dataset.label, heVariant: o.dataset.heLabel, inStock: o.dataset.stock !== "0" };
       }
-      return { price: +box.dataset.price, variant: "", inStock: box.dataset.stock !== "0" };
+      return { vi: null, price: +box.dataset.price, variant: "", heVariant: "", inStock: box.dataset.stock !== "0" };
     }
     function sync() {
       var c = current();
       if (priceEl) priceEl.textContent = money(c.price);
       addBtn.disabled = !c.inStock;
-      addBtn.textContent = c.inStock ? "הוספה לסל" : "אזל מהמלאי";
+      addBtn.textContent = c.inStock ? T.addToCart : T.outOfStock;
     }
     if (sel) sel.addEventListener("change", sync);
     $$("[data-qty]", box).forEach(function (b) {
@@ -125,12 +140,12 @@
     addBtn.addEventListener("click", function () {
       var c = current();
       if (!c.inStock) return;
-      addToCart({ id: +box.dataset.id, name: box.dataset.name, image: box.dataset.image, url: location.pathname, price: c.price, variant: c.variant },
+      addToCart({ id: +box.dataset.id, vi: c.vi, name: box.dataset.name, he: box.dataset.he, image: box.dataset.image,
+        url: location.pathname, price: c.price, variant: c.variant, heVariant: c.heVariant },
         Math.max(1, Math.min(99, +qtyInput.value || 1)));
     });
     sync();
 
-    // gallery
     var main = $("[data-gallery-main]");
     $$("[data-thumb]").forEach(function (t) {
       t.addEventListener("click", function () {
@@ -162,11 +177,11 @@
       var sorted = cards.slice().sort(function (a, b) {
         if (mode === "price-asc") return a.dataset.price - b.dataset.price;
         if (mode === "price-desc") return b.dataset.price - a.dataset.price;
-        if (mode === "name") return a.dataset.name.localeCompare(b.dataset.name, "he");
+        if (mode === "name") return a.dataset.name.localeCompare(b.dataset.name, LANG);
         return a.dataset.order - b.dataset.order;
       });
       sorted.forEach(function (c) { grid.appendChild(c); });
-      if (count) count.textContent = shown + " מוצרים";
+      if (count) count.textContent = tr("nProducts", { n: shown });
       if (empty) empty.hidden = shown !== 0;
     }
     [search, sort, kosherSel].forEach(function (el) { if (el) el.addEventListener("input", apply); });
@@ -190,16 +205,16 @@
     var filled = $("[data-cart-filled]", root);
     var form = $("#checkout-form");
 
-    // refresh prices/stock from the live catalogue
-    fetch(BASE + "/assets/data/products.json").then(function (r) { return r.json(); }).then(function (products) {
+    // refresh names, prices and stock from the live catalogue, in this page's language
+    fetch(CFG.catalog).then(function (r) { return r.json(); }).then(function (products) {
       var map = {}; products.forEach(function (p) { map[p.id] = p; });
       var cart = getCart().filter(function (i) { return map[i.id]; }).map(function (i) {
         var p = map[i.id];
-        if (p.variants && i.variant) {
-          var v = p.variants.find(function (x) { return x.label === i.variant; });
-          if (v) i.price = v.price;
-        } else if (!p.variants) i.price = p.price;
-        i.name = p.name;
+        i.name = p.name; i.he = p.he; i.url = p.url; i.image = i.image || p.image;
+        if (i.vi != null && p.variants[i.vi]) {
+          var v = p.variants[i.vi];
+          i.price = v.price; i.variant = v.label; i.heVariant = v.he;
+        } else if (!p.variants.length) i.price = p.price;
         return i;
       });
       saveCart(cart);
@@ -214,11 +229,11 @@
           (i.image ? '<img src="' + esc(i.image) + '" alt="" width="76" height="76" loading="lazy">' : '<span></span>') +
           '<div><h3>' + (i.url ? '<a href="' + esc(i.url) + '">' + esc(i.name) + "</a>" : esc(i.name)) + "</h3>" +
           (i.variant ? '<div class="variant">' + esc(i.variant) + "</div>" : "") +
-          '<div class="variant">' + money(i.price) + " ליחידה</div>" +
-          '<div class="qty" style="margin-top:6px"><button type="button" data-cq="' + idx + '" data-d="-1" aria-label="הפחתת כמות">−</button>' +
-          '<input type="number" min="1" max="99" value="' + i.qty + '" data-ci="' + idx + '" aria-label="כמות של ' + esc(i.name) + '">' +
-          '<button type="button" data-cq="' + idx + '" data-d="1" aria-label="הוספת כמות">+</button></div></div>' +
-          '<div class="line-total">' + money(i.price * i.qty) + '<br><button type="button" class="remove" data-rm="' + idx + '">הסרה</button></div></li>';
+          '<div class="variant">' + money(i.price) + esc(T.perUnit) + "</div>" +
+          '<div class="qty" style="margin-top:6px"><button type="button" data-cq="' + idx + '" data-d="1" aria-label="+">+</button>' +
+          '<input type="number" min="1" max="99" value="' + i.qty + '" data-ci="' + idx + '" aria-label="' + esc(T.qtyOf + i.name) + '">' +
+          '<button type="button" data-cq="' + idx + '" data-d="-1" aria-label="−">−</button></div></div>' +
+          '<div class="line-total">' + money(i.price * i.qty) + '<br><button type="button" class="remove" data-rm="' + idx + '">' + esc(T.remove) + "</button></div></li>";
       }).join("");
       renderSummary();
     }
@@ -231,15 +246,15 @@
       var m = method();
       var ship = shippingFor(sub, m);
       $("[data-sub]").textContent = money(sub);
-      $("[data-ship]").textContent = m === "delivery" ? (ship === 0 ? "חינם" : money(ship)) : "איסוף עצמי – ללא עלות";
+      $("[data-ship]").textContent = m === "delivery" ? (ship === 0 ? T.free : money(ship)) : T.pickupFree;
       $("[data-total]").textContent = money(sub + ship);
       var bar = $("[data-free-bar]"), msg = $("[data-free-msg]");
       if (m === "delivery") {
         bar.parentElement.hidden = false;
         bar.style.width = Math.min(100, sub / s.freeOver * 100) + "%";
-        msg.textContent = sub >= s.freeOver ? "יש לכם משלוח חינם 🎉" :
-          sub < s.minOrder ? "מינימום הזמנה למשלוח: " + money(s.minOrder) + ". חסרים עוד " + money(s.minOrder - sub) + "." :
-          "עוד " + money(s.freeOver - sub) + " למשלוח חינם";
+        msg.textContent = sub >= s.freeOver ? T.freeYes :
+          sub < s.minOrder ? tr("minMsg", { min: money(s.minOrder), left: money(s.minOrder - sub) }) :
+          tr("toFree", { left: money(s.freeOver - sub) });
       } else { bar.parentElement.hidden = true; msg.textContent = ""; }
       var submit = $("[data-submit-order]");
       if (submit) submit.disabled = getCart().length === 0;
@@ -278,37 +293,37 @@
         if (!cart.length) return;
         if (m === "delivery" && sub < s.minOrder) {
           status.className = "form-status err";
-          status.textContent = "מינימום הזמנה למשלוח הוא " + money(s.minOrder) + ". אפשר להוסיף מוצרים או לבחור איסוף עצמי.";
+          status.textContent = tr("minErr", { min: money(s.minOrder) });
           return;
         }
         if (!form.reportValidity()) return;
         var fd = new FormData(form);
         var ship = shippingFor(sub, m);
-        var methodLabel = { delivery: "משלוח עד הבית", shilat: "איסוף מחנות המפעל בשילת", sarona: "איסוף משרונה מרקט" }[m];
-        var lines = ["*הזמנה חדשה מהאתר – צרפתי*", ""];
+        var methodLabel = { delivery: T.mDelivery, shilat: T.mShilat, sarona: T.mSarona }[m];
+        var lines = ["*" + T.orderTitle + "*" + (LANG !== "he" ? " [" + LANG.toUpperCase() + "]" : ""), ""];
         cart.forEach(function (i) {
-          lines.push("• " + i.name + (i.variant ? " (" + i.variant + ")" : "") + " × " + i.qty + " = " + money(i.price * i.qty));
+          var line = "• " + i.name + (i.variant ? " (" + i.variant + ")" : "") + " × " + i.qty + " = " + money(i.price * i.qty);
+          if (LANG !== "he" && i.he) line += "\n   ↳ " + i.he + (i.heVariant ? " (" + i.heVariant + ")" : "");
+          lines.push(line);
         });
-        lines.push("", "סכום ביניים: " + money(sub));
-        lines.push("משלוח: " + (m === "delivery" ? (ship ? money(ship) : "חינם") : "—"));
-        lines.push("*סה״כ משוער: " + money(sub + ship) + "*", "");
-        lines.push("שם: " + fd.get("name"), "טלפון: " + fd.get("phone"));
-        if (fd.get("email")) lines.push("אימייל: " + fd.get("email"));
-        lines.push("אופן קבלה: " + methodLabel);
+        lines.push("", T.lSubtotal + ": " + money(sub));
+        lines.push(T.lShipping + ": " + (m === "delivery" ? (ship ? money(ship) : T.free) : "—"));
+        lines.push("*" + T.lTotal + ": " + money(sub + ship) + "*", "");
+        lines.push(T.lName + ": " + fd.get("name"), T.lPhone + ": " + fd.get("phone"));
+        if (fd.get("email")) lines.push(T.lEmail + ": " + fd.get("email"));
+        lines.push(T.lMethod + ": " + methodLabel);
         if (m === "delivery") {
           var zoneSel = form.querySelector("select[name=zone]");
-          lines.push("אזור: " + zoneSel.options[zoneSel.selectedIndex].text);
-          lines.push("כתובת: " + fd.get("address") + ", " + fd.get("city"));
+          lines.push(T.lZone + ": " + zoneSel.options[zoneSel.selectedIndex].text);
+          lines.push(T.lAddress + ": " + fd.get("address") + ", " + fd.get("city"));
         }
-        if (fd.get("date")) lines.push("תאריך מבוקש: " + fd.get("date"));
-        if (fd.get("notes")) lines.push("הערות: " + fd.get("notes"));
+        if (fd.get("date")) lines.push(T.lDate + ": " + fd.get("date"));
+        if (fd.get("notes")) lines.push(T.lNotes + ": " + fd.get("notes"));
         var text = lines.join("\n");
-        sendToEndpoint("הזמנה חדשה מהאתר", text, fd);
+        sendToEndpoint(T.orderTitle, text, fd);
         var url = "https://wa.me/" + CFG.whatsapp + "?text=" + encodeURIComponent(text);
         status.className = "form-status ok";
-        status.innerHTML = "ההזמנה מוכנה! נפתח עבורכם WhatsApp עם פרטי ההזמנה – רק לשלוח. " +
-          'אם החלון לא נפתח, <a href="' + url + '" target="_blank" rel="noopener">לחצו כאן</a>. ' +
-          "נציג יחזור אליכם לאישור ותשלום.";
+        status.innerHTML = tr("orderReady", { url: url });
         window.open(url, "_blank", "noopener");
         $("[data-clear-after]").hidden = false;
       });
@@ -318,10 +333,10 @@
     render();
   }
 
-  /* ---------- generic forms (contact / events / club / wholesale) ---------- */
+  /* ---------- generic forms (contact / events / club / business) ---------- */
   function sendToEndpoint(subject, text, fd) {
     if (!CFG.formEndpoint) return Promise.resolve(false);
-    var body = { subject: subject, message: text, from_name: "אתר צרפתי" };
+    var body = { subject: subject, message: text, from_name: "Sarfati website", language: LANG };
     if (CFG.formAccessKey) body.access_key = CFG.formAccessKey;
     if (fd) fd.forEach(function (v, k) { if (!(k in body)) body[k] = v; });
     return fetch(CFG.formEndpoint, {
@@ -336,7 +351,7 @@
         if (!form.reportValidity()) return;
         var title = form.dataset.form;
         var fd = new FormData(form);
-        var lines = ["*" + title + " – מהאתר*"];
+        var lines = ["*" + title + T.fromSite + "*" + (LANG !== "he" ? " [" + LANG.toUpperCase() + "]" : "")];
         $$("[name]", form).forEach(function (f) {
           if (f.type === "checkbox" || f.type === "hidden" || !f.value) return;
           var lab = form.querySelector('label[for="' + f.id + '"]');
@@ -350,13 +365,12 @@
           btn.disabled = false;
           if (ok) {
             status.className = "form-status ok";
-            status.textContent = "תודה! הפרטים התקבלו ונחזור אליכם בהקדם.";
+            status.textContent = T.thanks;
             form.reset();
           } else {
             var url = "https://wa.me/" + CFG.whatsapp + "?text=" + encodeURIComponent(text);
             status.className = "form-status ok";
-            status.innerHTML = "כמעט סיימנו – נפתח WhatsApp עם הפרטים שמילאתם, רק לשלוח. " +
-              '<a href="' + url + '" target="_blank" rel="noopener">לא נפתח? לחצו כאן</a>';
+            status.innerHTML = tr("almost", { url: url });
             window.open(url, "_blank", "noopener");
           }
         });
@@ -367,6 +381,7 @@
   document.addEventListener("DOMContentLoaded", function () {
     renderCount();
     initDrawer();
+    initLangSwitch();
     initCardButtons();
     initProduct();
     initShop();

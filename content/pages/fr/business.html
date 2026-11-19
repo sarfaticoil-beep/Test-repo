@@ -1,0 +1,45 @@
+<!--
+title: Sarfati pour les entreprises – plateaux de bureau et vente en gros
+description: Plateaux pour réunions, journées d'équipe et événements d'entreprise, et vente en gros de saumon et poissons fumés pour boutiques, épiceries fines et restaurants. Demandez notre catalogue.
+hero_title: Sarfati pour les entreprises
+hero_intro: Plateaux pour bureaux et événements, et vente en gros pour boutiques et épiceries fines.
+-->
+<section class="section">
+  <div class="wrap grid grid-2">
+    <div class="card">
+      {{img:platter-board|Plateau pour une réunion d'affaires}}
+      <div class="card-body">
+        <span class="eyebrow">Plateaux réunions & événements</span>
+        <h2 style="font-size:1.6rem">Faites plaisir à vos équipes et clients</h2>
+        <p>Des plateaux impressionnants et délicieux pour les bureaux, événements, réunions et journées d'équipe – ainsi que des coffrets cadeaux de fêtes pour vos salariés et clients.</p>
+        <a class="link-arrow" href="{{link:cat:platters}}">Voir les plateaux</a>
+      </div>
+    </div>
+    <div class="card">
+      {{img:packaged-salmon|Saumon fumé Sarfati emballé}}
+      <div class="card-body">
+        <span class="eyebrow">Vente en gros</span>
+        <h2 style="font-size:1.6rem">Sarfati dans vos rayons</h2>
+        <p>Vous rêvez du saumon fumé Sarfati dans votre boutique ? Nos produits sont déjà vendus dans de belles épiceries fines partout en Israël. Laissez vos coordonnées et nous vous enverrons notre catalogue et nos tarifs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section section--sand">
+  <div class="narrow">
+    <form class="form-card" data-form="Demande entreprise / vente en gros" novalidate>
+      <h2>Laissez vos coordonnées</h2>
+      <div class="form-grid two">
+        <div class="field"><label for="b-name">Nom complet *</label><input id="b-name" name="name" type="text" autocomplete="name" required></div>
+        <div class="field"><label for="b-company">Nom de l'entreprise / boutique *</label><input id="b-company" name="company" type="text" autocomplete="organization" required></div>
+        <div class="field"><label for="b-phone">Téléphone *</label><input id="b-phone" name="phone" type="tel" autocomplete="tel" required></div>
+        <div class="field"><label for="b-email">E-mail</label><input id="b-email" name="email" type="email" autocomplete="email"></div>
+        <div class="field"><label for="b-address">Adresse de l'entreprise</label><input id="b-address" name="address" type="text"></div>
+        <div class="field"><label for="b-type">Vous êtes intéressé par</label><select id="b-type" name="interest"><option>Catalogue et tarifs de gros</option><option>Plateaux pour bureau / événement</option><option>Coffrets cadeaux pour salariés</option><option>Autre</option></select></div>
+        <div class="field full"><label for="b-msg">Message</label><textarea id="b-msg" name="message"></textarea></div>
+      </div>
+      <button type="submit" class="btn btn--primary btn--block mt-2">Envoyer</button>
+      <div class="form-status" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>

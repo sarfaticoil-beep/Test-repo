@@ -1,0 +1,41 @@
+<!--
+title: اتصل بنا – الهاتف والعنوان وساعات العمل
+description: تواصلوا مع صرفاتي: متجر المصنع في شيلات (08-6825888) وفرع سارونا ماركت في تل أبيب (03-5252552). ساعات العمل والملاحة ونموذج التواصل.
+hero_title: اتصل بنا
+hero_intro: يسعدنا مساعدتكم – بالهاتف أو واتساب أو عبر النموذج.
+schema: business
+-->
+<section class="section">
+  <div class="wrap split" style="align-items:start">
+    <div class="stack">
+      <div class="form-card contact-card">
+        <h2 style="font-size:1.4rem">{{branch:shilat}}</h2>
+        <div class="row">{{icon:pin}}<a href="{{waze:shilat}}" target="_blank" rel="noopener">{{address:shilat}}</a></div>
+        <div class="row">{{icon:phone}}<a href="tel:{{phoneIntl}}" dir="ltr">{{phone}}</a></div>
+        <div class="row">{{icon:mail}}<a href="mailto:{{email}}">{{email}}</a></div>
+        <h3 style="font-size:1.05rem;margin-top:8px">ساعات عمل المتجر</h3>
+        {{hours:shilat}}
+        <p class="small muted mb-0">ساعات عمل المكتب: {{officeHours}}</p>
+      </div>
+      <div class="form-card contact-card">
+        <h2 style="font-size:1.4rem">{{branch:sarona}}</h2>
+        <div class="row">{{icon:pin}}<a href="{{waze:sarona}}" target="_blank" rel="noopener">{{address:sarona}}</a></div>
+        <div class="row">{{icon:phone}}<a href="tel:+97235252552" dir="ltr">03-5252552</a></div>
+        {{hours:sarona}}
+      </div>
+    </div>
+    <form class="form-card" data-form="رسالة من الموقع" novalidate>
+      <h2>أرسلوا لنا رسالة</h2>
+      <div class="form-grid">
+        <div class="field"><label for="c-name">الاسم *</label><input id="c-name" name="name" type="text" autocomplete="name" required></div>
+        <div class="field"><label for="c-phone">الهاتف *</label><input id="c-phone" name="phone" type="tel" autocomplete="tel" required></div>
+        <div class="field"><label for="c-email">البريد الإلكتروني</label><input id="c-email" name="email" type="email" autocomplete="email"></div>
+        <div class="field"><label for="c-topic">موضوع الرسالة</label><select id="c-topic" name="topic"><option>استفسار عام</option><option>طلب قائم</option><option>استفسار عن منتج</option><option>إلغاء طلب</option></select></div>
+        <div class="field"><label for="c-msg">الرسالة *</label><textarea id="c-msg" name="message" required></textarea></div>
+      </div>
+      <button type="submit" class="btn btn--primary btn--block mt-2">إرسال</button>
+      <p class="small muted mt-2 mb-0">أو مباشرة <a href="https://wa.me/{{whatsapp}}">عبر واتساب <span dir="ltr">{{whatsappDisplay}}</span></a></p>
+      <div class="form-status" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>

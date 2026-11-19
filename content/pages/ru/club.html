@@ -1,0 +1,25 @@
+<!--
+title: Клуб покупателей
+description: Вступайте в клуб покупателей Sarfati: скидки, праздничные предложения и угощение ко дню рождения.
+hero_title: Клуб покупателей Sarfati
+hero_intro: Скидки, праздничные предложения и сюрпризы ко дню рождения и годовщине свадьбы.
+-->
+<section class="section">
+  <div class="narrow">
+    <form class="form-card" data-form="Вступление в клуб покупателей" novalidate>
+      <h2>Заполните форму, чтобы вступить</h2>
+      <div class="form-grid two">
+        <div class="field"><label for="cl-first">Имя *</label><input id="cl-first" name="first_name" type="text" autocomplete="given-name" required></div>
+        <div class="field"><label for="cl-last">Фамилия *</label><input id="cl-last" name="last_name" type="text" autocomplete="family-name" required></div>
+        <div class="field"><label for="cl-phone">Телефон *</label><input id="cl-phone" name="phone" type="tel" autocomplete="tel" required></div>
+        <div class="field"><label for="cl-email">E-mail</label><input id="cl-email" name="email" type="email" autocomplete="email"></div>
+        <div class="field"><label for="cl-bday">Дата рождения</label><input id="cl-bday" name="birthday" type="date"></div>
+        <div class="field"><label for="cl-anniv">Дата свадьбы</label><input id="cl-anniv" name="anniversary" type="date"></div>
+        <label class="check full"><input type="checkbox" name="consent" required> <span>Я согласен(на) получать от Sarfati Smokers Ltd. рекламные сообщения по e-mail, SMS или иным электронным способом в соответствии с законом. Я знаю, что могу отписаться в любой момент. *</span></label>
+      </div>
+      <button type="submit" class="btn btn--gold btn--block mt-2">Вступить</button>
+      <p class="small muted mt-2 mb-0">Sarfati может изменять привилегии клуба по своему усмотрению. Ваши данные хранятся в соответствии с <a href="{{link:terms}}">политикой конфиденциальности</a>.</p>
+      <div class="form-status" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>

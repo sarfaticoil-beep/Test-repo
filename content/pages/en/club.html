@@ -1,0 +1,25 @@
+<!--
+title: Customer club
+description: Join the Sarfati customer club for benefits, holiday offers and a birthday treat.
+hero_title: The Sarfati customer club
+hero_intro: Benefits, holiday offers and surprises for your birthday and anniversary.
+-->
+<section class="section">
+  <div class="narrow">
+    <form class="form-card" data-form="Customer club sign-up" novalidate>
+      <h2>Fill in the form to join</h2>
+      <div class="form-grid two">
+        <div class="field"><label for="cl-first">First name *</label><input id="cl-first" name="first_name" type="text" autocomplete="given-name" required></div>
+        <div class="field"><label for="cl-last">Last name *</label><input id="cl-last" name="last_name" type="text" autocomplete="family-name" required></div>
+        <div class="field"><label for="cl-phone">Phone *</label><input id="cl-phone" name="phone" type="tel" autocomplete="tel" required></div>
+        <div class="field"><label for="cl-email">Email</label><input id="cl-email" name="email" type="email" autocomplete="email"></div>
+        <div class="field"><label for="cl-bday">Date of birth</label><input id="cl-bday" name="birthday" type="date"></div>
+        <div class="field"><label for="cl-anniv">Wedding anniversary</label><input id="cl-anniv" name="anniversary" type="date"></div>
+        <label class="check full"><input type="checkbox" name="consent" required> <span>I agree that Sarfati Smokers Ltd. may send me marketing messages by email, SMS or any other electronic means, as defined by law. I know I can unsubscribe at any time. *</span></label>
+      </div>
+      <button type="submit" class="btn btn--gold btn--block mt-2">Join</button>
+      <p class="small muted mt-2 mb-0">Sarfati may change club benefits at its discretion. Your details are kept in line with our <a href="{{link:terms}}">privacy policy</a>.</p>
+      <div class="form-status" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>

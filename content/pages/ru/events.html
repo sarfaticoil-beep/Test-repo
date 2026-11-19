@@ -1,0 +1,42 @@
+<!--
+title: Мероприятия в деликатесной Sarfati в Шилате
+description: Корпоративы, дни рождения, шева брахот и деловые встречи на 20–50 гостей в деликатесной Sarfati в Шилате. Копчёная рыба, сэндвичи и салаты, кашрут мехадрин.
+hero_title: Мероприятия у нас
+hero_intro: Небольшие мероприятия на 20–50 гостей под открытым небом – на совершенно новом уровне.
+active: deli
+-->
+<section class="section">
+  <div class="wrap split">
+    <div>
+      <p class="lead">На веранде нашей деликатесной в Шилате можно провести небольшое мероприятие: корпоратив, день рождения, шева брахот, деловую встречу и многое другое.</p>
+      <div class="prose">
+        <p>В меню мероприятий: разнообразные сэндвичи, салаты из копчёной рыбы, целая рыба прямо из горячей коптильни и свежие салаты.</p>
+        <ul>
+          <li>20–50 гостей</li>
+          <li>Кашрут Мехадрин Хевель Модиин (можно заказать и продукты с кашрутом Бадац Эда Харедит)</li>
+          <li>Меню под ваше мероприятие и бюджет</li>
+        </ul>
+      </div>
+    </div>
+    <div class="split-media">{{img:event-platter|Подносы для мероприятия}}</div>
+  </div>
+</section>
+<section class="section section--sand">
+  <div class="narrow">
+    <form class="form-card" data-form="Заявка на мероприятие" novalidate>
+      <h2>Давайте спланируем ваше мероприятие</h2>
+      <p class="muted">Оставьте контакты, и мы пришлём вам предложение.</p>
+      <div class="form-grid two">
+        <div class="field"><label for="ev-name">Имя *</label><input id="ev-name" name="name" type="text" autocomplete="name" required></div>
+        <div class="field"><label for="ev-phone">Телефон *</label><input id="ev-phone" name="phone" type="tel" autocomplete="tel" required></div>
+        <div class="field"><label for="ev-email">E-mail</label><input id="ev-email" name="email" type="email" autocomplete="email"></div>
+        <div class="field"><label for="ev-date">Дата мероприятия</label><input id="ev-date" name="event_date" type="date"></div>
+        <div class="field"><label for="ev-guests">Количество гостей</label><input id="ev-guests" name="guests" type="number" min="10" max="80"></div>
+        <div class="field"><label for="ev-type">Тип мероприятия</label><select id="ev-type" name="type"><option value="">Выберите…</option><option>День рождения</option><option>Шева брахот</option><option>Корпоратив</option><option>Деловая встреча</option><option>Другое</option></select></div>
+        <div class="field full"><label for="ev-msg">Сообщение</label><textarea id="ev-msg" name="message"></textarea></div>
+      </div>
+      <button type="submit" class="btn btn--primary btn--block mt-2">Отправить</button>
+      <div class="form-status" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>

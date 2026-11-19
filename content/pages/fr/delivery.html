@@ -1,0 +1,47 @@
+<!--
+title: Livraison – jours et zones
+description: Livraison réfrigérée à domicile à Jérusalem, Tel-Aviv, dans le Sharon, le Goush Dan et le sud. Commande minimum, frais de livraison, livraison offerte et retrait à Shilat et Sarona Market.
+hero_title: Livraison et retrait
+hero_intro: Vos poissons partent du fumoir au frais, le jour de livraison habituel de chaque zone.
+-->
+<section class="section">
+  <div class="wrap split" style="align-items:start">
+    <div>
+      <h2>Nos jours de livraison</h2>
+      {{zones}}
+      <p class="small muted mt-2">Dans le sud, la livraison a lieu une semaine sur deux – renseignez-vous à l'avance sur la semaine concernée. Pour toute autre zone : <a href="tel:{{phoneIntl}}">{{phone}}</a>.</p>
+    </div>
+    <div class="stack">
+      <div class="form-card">
+        <h3>Conditions de livraison</h3>
+        <ul class="trust-list" style="color:inherit">
+          <li>{{icon:check}} Commande minimum pour la livraison : <strong>{{minOrder}}</strong></li>
+          <li>{{icon:check}} Frais de livraison : <strong>{{fee}}</strong></li>
+          <li>{{icon:check}} Livraison offerte dès <strong>{{freeOver}}</strong></li>
+          <li>{{icon:check}} Commandez <strong>{{cutoff}}</strong></li>
+        </ul>
+        <a class="btn btn--primary btn--block mt-2" href="{{link:shop}}">Commander en ligne</a>
+      </div>
+      <div class="split-media landscape">{{img:delivery-van|Le camion réfrigéré de Sarfati}}</div>
+    </div>
+  </div>
+</section>
+<section class="section section--sand">
+  <div class="wrap">
+    <h2>Vous préférez venir chercher ?</h2>
+    <div class="grid grid-2 mt-2">
+      <div class="form-card"><h3>{{branch:shilat}}</h3><p>{{address:shilat}}</p>{{hours:shilat}}<a class="btn btn--ghost btn--sm mt-2" href="{{waze:shilat}}" target="_blank" rel="noopener">Itinéraire Waze</a></div>
+      <div class="form-card"><h3>{{branch:sarona}}</h3><p>{{address:sarona}}</p>{{hours:sarona}}<a class="btn btn--ghost btn--sm mt-2" href="{{waze:sarona}}" target="_blank" rel="noopener">Itinéraire Waze</a></div>
+    </div>
+    <p class="mt-3">À Tel-Aviv, Herzliya ou aux alentours ? Commandez aussi en <a href="{{link:wolt}}">livraison express sur Wolt</a> depuis notre comptoir de Sarona Market.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="narrow faq">
+    <h2>Questions fréquentes</h2>
+    <details><summary>Comment les produits restent-ils au frais pendant le trajet ?</summary><div>Les commandes sont emballées avec soin et partent dans un camion réfrigéré le jour de livraison de votre zone.</div></details>
+    <details><summary>Comment payer ?</summary><div>Après l'envoi de votre commande, nous vous rappelons pour confirmer la disponibilité et le poids final, puis pour le paiement (par téléphone ou selon le moyen convenu avec vous).</div></details>
+    <details><summary>Pourquoi le prix final peut-il changer ?</summary><div>Certains produits (filets entiers, poissons fumés à chaud, etc.) sont vendus au poids. Chaque poisson pèse un peu différemment : vous payez le poids réel, que nous confirmons avec vous avant le paiement.</div></details>
+    <details><summary>Combien de temps se conservent les produits ?</summary><div>La date limite figure sur chaque emballage. Le poisson fumé sous vide se conserve au réfrigérateur entre 0 et 4 °C ; une fois ouvert, consommez-le dans les jours qui suivent.</div></details>
+  </div>
+</section>

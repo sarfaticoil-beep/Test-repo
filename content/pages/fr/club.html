@@ -1,0 +1,25 @@
+<!--
+title: Club clients
+description: Rejoignez le club clients Sarfati : avantages, offres pour les fêtes et une surprise pour votre anniversaire.
+hero_title: Le club clients Sarfati
+hero_intro: Avantages, offres pour les fêtes et surprises pour votre anniversaire et votre anniversaire de mariage.
+-->
+<section class="section">
+  <div class="narrow">
+    <form class="form-card" data-form="Inscription au club clients" novalidate>
+      <h2>Remplissez le formulaire pour nous rejoindre</h2>
+      <div class="form-grid two">
+        <div class="field"><label for="cl-first">Prénom *</label><input id="cl-first" name="first_name" type="text" autocomplete="given-name" required></div>
+        <div class="field"><label for="cl-last">Nom *</label><input id="cl-last" name="last_name" type="text" autocomplete="family-name" required></div>
+        <div class="field"><label for="cl-phone">Téléphone *</label><input id="cl-phone" name="phone" type="tel" autocomplete="tel" required></div>
+        <div class="field"><label for="cl-email">E-mail</label><input id="cl-email" name="email" type="email" autocomplete="email"></div>
+        <div class="field"><label for="cl-bday">Date de naissance</label><input id="cl-bday" name="birthday" type="date"></div>
+        <div class="field"><label for="cl-anniv">Date de mariage</label><input id="cl-anniv" name="anniversary" type="date"></div>
+        <label class="check full"><input type="checkbox" name="consent" required> <span>J'accepte que Sarfati Smokers Ltd. m'envoie des messages publicitaires par e-mail, SMS ou tout autre moyen électronique, au sens de la loi. Je sais que je peux me désinscrire à tout moment. *</span></label>
+      </div>
+      <button type="submit" class="btn btn--gold btn--block mt-2">S'inscrire</button>
+      <p class="small muted mt-2 mb-0">Sarfati peut modifier les avantages du club à sa discrétion. Vos données sont conservées conformément à notre <a href="{{link:terms}}">politique de confidentialité</a>.</p>
+      <div class="form-status" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>

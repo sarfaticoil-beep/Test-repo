@@ -1,0 +1,47 @@
+<!--
+title: Доставка – дни и районы
+description: Доставка в холоде до двери: Иерусалим, Тель-Авив, Шарон, Гуш-Дан и юг. Минимальный заказ, стоимость доставки, бесплатная доставка и самовывоз из Шилата и Сарона Маркет.
+hero_title: Доставка и самовывоз
+hero_intro: Рыба выезжает из коптильни в холоде – в постоянный день доставки для каждого района.
+-->
+<section class="section">
+  <div class="wrap split" style="align-items:start">
+    <div>
+      <h2>Наши дни доставки</h2>
+      {{zones}}
+      <p class="small muted mt-2">На юг доставка раз в две недели – уточните заранее, в какую неделю. Для других районов: <a href="tel:{{phoneIntl}}">{{phone}}</a>.</p>
+    </div>
+    <div class="stack">
+      <div class="form-card">
+        <h3>Условия доставки</h3>
+        <ul class="trust-list" style="color:inherit">
+          <li>{{icon:check}} Минимальный заказ для доставки: <strong>{{minOrder}}</strong></li>
+          <li>{{icon:check}} Стоимость доставки: <strong>{{fee}}</strong></li>
+          <li>{{icon:check}} Бесплатная доставка при заказе от <strong>{{freeOver}}</strong></li>
+          <li>{{icon:check}} Заказывайте <strong>{{cutoff}}</strong></li>
+        </ul>
+        <a class="btn btn--primary btn--block mt-2" href="{{link:shop}}">Заказать онлайн</a>
+      </div>
+      <div class="split-media landscape">{{img:delivery-van|Рефрижератор Sarfati}}</div>
+    </div>
+  </div>
+</section>
+<section class="section section--sand">
+  <div class="wrap">
+    <h2>Удобнее забрать самим?</h2>
+    <div class="grid grid-2 mt-2">
+      <div class="form-card"><h3>{{branch:shilat}}</h3><p>{{address:shilat}}</p>{{hours:shilat}}<a class="btn btn--ghost btn--sm mt-2" href="{{waze:shilat}}" target="_blank" rel="noopener">Маршрут в Waze</a></div>
+      <div class="form-card"><h3>{{branch:sarona}}</h3><p>{{address:sarona}}</p>{{hours:sarona}}<a class="btn btn--ghost btn--sm mt-2" href="{{waze:sarona}}" target="_blank" rel="noopener">Маршрут в Waze</a></div>
+    </div>
+    <p class="mt-3">В Тель-Авиве, Герцлии или рядом? Можно также заказать <a href="{{link:wolt}}">быструю доставку через Wolt</a> из нашей точки на Сарона Маркет.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="narrow faq">
+    <h2>Частые вопросы</h2>
+    <details><summary>Как продукты остаются холодными в дороге?</summary><div>Заказы тщательно упаковываются и едут в рефрижераторе в день доставки вашего района.</div></details>
+    <details><summary>Как оплатить?</summary><div>После отправки заказа мы перезваниваем, чтобы подтвердить наличие и итоговый вес и принять оплату (по телефону или другим согласованным способом).</div></details>
+    <details><summary>Почему итоговая цена может измениться?</summary><div>Часть товаров (целое филе, рыба горячего копчения и т. п.) продаётся на развес. Каждая рыба весит немного по-разному, поэтому оплата идёт по фактическому весу – мы согласуем его с вами до оплаты.</div></details>
+    <details><summary>Сколько хранятся продукты?</summary><div>Срок годности указан на каждой упаковке. Копчёная рыба в вакууме хранится в холодильнике при 0–4 °C; после вскрытия съешьте её в течение нескольких дней.</div></details>
+  </div>
+</section>
