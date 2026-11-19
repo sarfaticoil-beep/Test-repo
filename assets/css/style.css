@@ -454,3 +454,17 @@ body:has([data-cart-page]) .wa-float { display: none; }
 .note--err { background: #fbe9e7; border-color: var(--danger); }
 .linklike { background: none; border: 0; padding: 0; color: var(--navy); text-decoration: underline; cursor: pointer; font: inherit; }
 [dir="ltr"] .qty { flex-direction: row-reverse; }
+
+/* Welcome popup (shown once) */
+.welcome { position: fixed; inset: 0; z-index: 90; display: grid; place-items: center; padding: 16px; }
+.welcome[hidden] { display: none; }
+.welcome-backdrop { position: absolute; inset: 0; background: rgba(15, 22, 40, .55); }
+.welcome-box {
+  position: relative; width: min(100%, 440px); background: var(--cream); border-radius: 20px; padding: 32px 24px 24px;
+  text-align: center; box-shadow: var(--shadow-lg); animation: welcome-in .25s ease-out;
+}
+.welcome-box img { width: 96px; height: auto; margin: 0 auto 8px; }
+.welcome-box h2 { font-size: 1.6rem; margin-bottom: 10px; }
+.welcome-box p { color: var(--muted); margin-bottom: 20px; }
+.welcome-x { position: absolute; top: 8px; inset-inline-end: 8px; }
+@keyframes welcome-in { from { opacity: 0; transform: translateY(12px) scale(.98); } to { opacity: 1; transform: none; } }

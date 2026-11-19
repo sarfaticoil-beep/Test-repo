@@ -460,7 +460,30 @@
     });
   }
 
+  /* ---------- one-time welcome window ---------- */
+  function initWelcome() {
+    var w = $("#welcome");
+    if (!w) return;
+    var KEY = "sarfati_welcome_v1";
+    try { if (localStorage.getItem(KEY)) return; localStorage.setItem(KEY, "1"); }
+    catch (e) { return; } // storage blocked: don't risk showing it on every page
+    var lastFocus = document.activeElement;
+    function close() {
+      w.hidden = true;
+      document.removeEventListener("keydown", onKey);
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+    function onKey(e) { if (e.key === "Escape") close(); }
+    $$("[data-welcome-close]", w).forEach(function (el) { el.addEventListener("click", close); });
+    setTimeout(function () {
+      w.hidden = false;
+      document.addEventListener("keydown", onKey);
+      var b = w.querySelector(".btn"); if (b) b.focus();
+    }, 800);
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
+    initWelcome();
     renderCount();
     initDrawer();
     initLangSwitch();

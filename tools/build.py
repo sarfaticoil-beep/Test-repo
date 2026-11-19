@@ -348,7 +348,27 @@ def footer():
   </div>
 </footer>
 <a class="wa-float" href="https://wa.me/{SITE['whatsapp']}" target="_blank" rel="noopener" aria-label="{E(ui('waAria'))}">{ICON['wa']}</a>
-<div class="toast" id="toast" role="status" aria-live="polite"><span></span><a href="{u(lpath('cart'))}">{E(ui('toCart'))}</a></div>"""
+<div class="toast" id="toast" role="status" aria-live="polite"><span></span><a href="{u(lpath('cart'))}">{E(ui('toCart'))}</a></div>
+{welcome_popup()}"""
+
+
+def welcome_popup():
+    """One-time 'welcome to our new site, no password needed' window. Turn off with "welcomePopup": false in content/site.json."""
+    if not SITE.get("welcomePopup"):
+        return ""
+    return f"""<div class="welcome" id="welcome" hidden>
+  <div class="welcome-backdrop" data-welcome-close></div>
+  <div class="welcome-box" role="dialog" aria-modal="true" aria-labelledby="welcome-title">
+    <button type="button" class="icon-btn welcome-x" data-welcome-close aria-label="{E(ui('welcomeClose'))}">{ICON['close']}</button>
+    <img src="{u('/assets/img/fish-512.png')}" alt="" width="120" height="120">
+    <h2 id="welcome-title">{E(ui('welcomeTitle'))}</h2>
+    <p>{E(ui('welcomeText'))}</p>
+    <div class="actions" style="justify-content:center">
+      <a class="btn btn--primary" href="{u(lpath('shop'))}" data-welcome-close>{E(ui('welcomeCta'))}</a>
+      <button type="button" class="btn btn--ghost" data-welcome-close>{E(ui('welcomeClose'))}</button>
+    </div>
+  </div>
+</div>"""
 
 
 def local_business_ld():

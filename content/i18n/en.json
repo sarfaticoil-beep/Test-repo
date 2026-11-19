@@ -137,7 +137,11 @@
   "cartIntroPay": "Check your order, fill in your details and pay securely by card – and your order is on its way.",
   "rememberMe": "Remember my details on this device for next time",
   "prefilled": "Your details were filled in automatically.",
-  "forgetMe": "Forget my details"
+  "forgetMe": "Forget my details",
+  "welcomeTitle": "Welcome to our new website!",
+  "welcomeText": "You can now order without a password or an account: choose your products, fill in your details – that's it. If you had an account on our old site, you no longer need it.",
+  "welcomeCta": "Start shopping",
+  "welcomeClose": "Close"
  },
  "js": {
   "added": "Added to cart: ",

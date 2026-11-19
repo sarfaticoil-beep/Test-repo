@@ -137,7 +137,11 @@
   "cartIntroPay": "Vérifiez votre commande, remplissez vos coordonnées et payez par carte en toute sécurité – votre commande est lancée.",
   "rememberMe": "Se souvenir de mes coordonnées sur cet appareil",
   "prefilled": "Vos coordonnées ont été remplies automatiquement.",
-  "forgetMe": "Effacer mes coordonnées"
+  "forgetMe": "Effacer mes coordonnées",
+  "welcomeTitle": "Bienvenue sur notre nouveau site !",
+  "welcomeText": "Vous pouvez maintenant commander sans mot de passe et sans créer de compte : choisissez vos produits, remplissez vos coordonnées, c'est tout. Si vous aviez un compte sur l'ancien site, vous n'en avez plus besoin.",
+  "welcomeCta": "Commander",
+  "welcomeClose": "Fermer"
  },
  "js": {
   "added": "Ajouté au panier : ",
