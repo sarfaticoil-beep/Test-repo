@@ -27,8 +27,7 @@
   "kosher": [
    "beityosef",
    "eda",
-   "mehadrin",
-   "pesach"
+   "mehadrin"
   ],
   "images": [
    "assets/img/p/7670-0.webp"
@@ -49,8 +48,7 @@
   ],
   "kosher": [
    "eda",
-   "mehadrin",
-   "pesach"
+   "mehadrin"
   ],
   "images": [
    "assets/img/p/7663-0.webp",
@@ -72,8 +70,7 @@
   ],
   "kosher": [
    "eda",
-   "mehadrin",
-   "pesach"
+   "mehadrin"
   ],
   "images": [
    "assets/img/p/7651-0.webp"
@@ -83,8 +80,8 @@
  },
  {
   "id": 7630,
-  "slug": "מארז-מושלם-כשר-לפסח",
-  "name": "מארז מושלם כשר לפסח",
+  "slug": "מארז-מושלם",
+  "name": "מארז מושלם",
   "price": 669.0,
   "inStock": true,
   "categories": [
@@ -93,15 +90,14 @@
   ],
   "kosher": [
    "beityosef",
-   "mehadrin",
-   "pesach"
+   "mehadrin"
   ],
   "images": [
    "assets/img/p/7630-0.webp",
    "assets/img/p/7630-1.webp"
   ],
   "summary": "מארז מושלם עבור חובבי מוצרים משובחים וטעמים אותנטיים. מה כולל המארז: – בקבוק יין לבן מובחר – פילה מקרל מעושן , עשיר בטעם – 200גר סלמון מעושן פרימיום ללא סוכר, פ",
-  "description": "<p><strong>מארז מושלם עבור חובבי מוצרים משובחים וטעמים אותנטיים.</strong></p> <p>מה כולל המארז:</p> <p>– בקבוק יין לבן מובחר</p> <p>– פילה מקרל מעושן , עשיר בטעם</p> <p>– 200גר סלמון מעושן פרימיום ללא סוכר, פרוס דק</p> <p>_200גר סלמון מעושן פרימיום קלאסי פרוס דק</p> <p>– פילה הרינג מעושן</p> <p>_פילה הרינג כבוש</p> <p>– בוטרגה (ביצי מולט מיובשות), עוצמה ואופי</p> <p>– זיתים ירוקים במילוי ממרח אנשובי</p> <p>– ענשובי מקנשבריה פרימיום בשמן זית</p> <p>– טרמה (ממרח ביצי קוד) ביתית, חלקה ומאוזנת</p> <p>_טונה ונטרסקה בשמן זית</p> <p>כל מוצר מיוצר מחומרי גלם באיכות גבוהה במיוחד, ליצירת איזון מושלם בין עדינות, מרקם ועומק טעמים.</p> <p> מושלם כמתנה, לאירוח או לפינוק גורמה אמיתי</p> <p>כשרות כשר לפסח בד”ץ בית יוסף</p>"
+  "description": "<p><strong>מארז מושלם עבור חובבי מוצרים משובחים וטעמים אותנטיים.</strong></p> <p>מה כולל המארז:</p> <p>– בקבוק יין לבן מובחר</p> <p>– פילה מקרל מעושן , עשיר בטעם</p> <p>– 200גר סלמון מעושן פרימיום ללא סוכר, פרוס דק</p> <p>_200גר סלמון מעושן פרימיום קלאסי פרוס דק</p> <p>– פילה הרינג מעושן</p> <p>_פילה הרינג כבוש</p> <p>– בוטרגה (ביצי מולט מיובשות), עוצמה ואופי</p> <p>– זיתים ירוקים במילוי ממרח אנשובי</p> <p>– ענשובי מקנשבריה פרימיום בשמן זית</p> <p>– טרמה (ממרח ביצי קוד) ביתית, חלקה ומאוזנת</p> <p>_טונה ונטרסקה בשמן זית</p> <p>כל מוצר מיוצר מחומרי גלם באיכות גבוהה במיוחד, ליצירת איזון מושלם בין עדינות, מרקם ועומק טעמים.</p> <p> מושלם כמתנה, לאירוח או לפינוק גורמה אמיתי</p> <p>כשרות: בד”ץ בית יוסף</p>"
  },
  {
   "id": 7591,
@@ -115,20 +111,19 @@
   ],
   "kosher": [
    "beityosef",
-   "mehadrin",
-   "pesach"
+   "mehadrin"
   ],
   "images": [
    "assets/img/p/7591-0.webp",
    "assets/img/p/7591-1.webp"
   ],
-  "summary": "מארז גורמה מארז אלגנטי המשלב את עושר הים עם מוצרים מובחרים, מושלם לחוויית טעימה אותנטית ונדיבה. מה כולל המארז: – בקבוק יין לבן מובחר – סרדינים בשמן זית, עשירים ",
+  "summary": "מארז גורמה מארז אלגנטי המשלב את עושר הים עם מוצרים מובחרים, מושלם לחוויית טעימה אותנטית ונדיבה. מה כולל המארז: – בקבוק יין לבן מובחר – סרדינים בשמן זית, עשירים",
   "description": "<p>מארז גורמה</p> <p>מארז אלגנטי המשלב את עושר הים עם מוצרים מובחרים, מושלם לחוויית טעימה אותנטית ונדיבה.</p> <p>מה כולל המארז:</p> <p>– בקבוק יין לבן מובחר</p> <p>– סרדינים בשמן זית, עשירים ועסיסיים</p> <p>– אנשובי פרימיום, בעלי טעם עמוק ואופי</p> <p>– קממבר עשיר, קרמי ומיושן</p> <p>– 200 גרם סלמון מעושן פרימיום קלאסי, פרוס דק</p> <p>– נתח סלמון מעושן בסלק, עדין ומיוחד</p> <p>כל רכיב במארז נבחר בקפידה ליצירת איזון מושלם בין עוצמה, עדינות ועושר טעמים.</p> <p>🎁 מושלם כמתנה, לאירוח או לרגע של פינוק גורמה עם מוצרים באיכות בלתי מתפשרת</p>"
  },
  {
   "id": 7571,
-  "slug": "מארז-גורמה-כשר-לפסח",
-  "name": "מארז גורמה כשר לפסח",
+  "slug": "מארז-גורמה",
+  "name": "מארז גורמה",
   "price": 469.0,
   "inStock": true,
   "categories": [
@@ -137,8 +132,7 @@
   ],
   "kosher": [
    "beityosef",
-   "mehadrin",
-   "pesach"
+   "mehadrin"
   ],
   "images": [
    "assets/img/p/7571-0.webp",
@@ -162,8 +156,7 @@
   ],
   "kosher": [
    "beityosef",
-   "mehadrin",
-   "pesach"
+   "mehadrin"
   ],
   "images": [
    "assets/img/p/7075-0.webp",
@@ -182,8 +175,7 @@
    "frozen"
   ],
   "kosher": [
-   "mehadrin",
-   "pesach"
+   "mehadrin"
   ],
   "images": [
    "assets/img/p/6983-0.webp"
@@ -203,8 +195,7 @@
   ],
   "kosher": [
    "beityosef",
-   "mehadrin",
-   "pesach"
+   "mehadrin"
   ],
   "images": [
    "assets/img/p/6885-0.webp",
@@ -265,8 +256,7 @@
   ],
   "kosher": [
    "eda",
-   "mehadrin",
-   "pesach"
+   "mehadrin"
   ],
   "images": [
    "assets/img/p/6562-0.webp",
@@ -287,13 +277,12 @@
   ],
   "kosher": [
    "eda",
-   "mehadrin",
-   "pesach"
+   "mehadrin"
   ],
   "images": [
    "assets/img/p/6157-0.webp"
   ],
-  "summary": "רול סלמון מעושן עישון חם גלילי סלמון מעושן בעבודת יד, מגולגלים בצורת סיגרים ומעושנים בעישון חם במעשנה המסורתית שלנו. טעם עשיר, מרקם נימוח — מושלם לפתיחת הארוחה ",
+  "summary": "רול סלמון מעושן עישון חם גלילי סלמון מעושן בעבודת יד, מגולגלים בצורת סיגרים ומעושנים בעישון חם במעשנה המסורתית שלנו. טעם עשיר, מרקם נימוח — מושלם לפתיחת הארוחה",
   "description": "<p>רול סלמון מעושן עישון חם</p> <p>גלילי סלמון מעושן בעבודת יד, מגולגלים בצורת סיגרים ומעושנים בעישון חם במעשנה המסורתית שלנו. טעם עשיר, מרקם נימוח — מושלם לפתיחת הארוחה או להגשה על מגשי אירוח.</p> <p>כשרות:בד״ץ העדה החרדית</p>"
  },
  {
@@ -308,8 +297,7 @@
   ],
   "kosher": [
    "eda",
-   "mehadrin",
-   "pesach"
+   "mehadrin"
   ],
   "images": [
    "assets/img/p/6130-0.webp"
@@ -329,8 +317,7 @@
    "smoked"
   ],
   "kosher": [
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/5974-0.webp"
@@ -348,14 +335,12 @@
    "salads",
    "smoked"
   ],
-  "kosher": [
-   "pesach"
-  ],
+  "kosher": [],
   "images": [
    "assets/img/p/5964-0.webp",
    "assets/img/p/5964-1.webp"
   ],
-  "summary": "**סלט הרינג כבוש עם בצל בשמן** גלו את הטעם המיוחד של סלט ההרינג הכבוש שלנו, המשלב הרינג איכותי במרינדה ייחודית עם בצל טרי בשמן. סלט זה מתאים כמנה ראשונה מושלמת ",
+  "summary": "**סלט הרינג כבוש עם בצל בשמן** גלו את הטעם המיוחד של סלט ההרינג הכבוש שלנו, המשלב הרינג איכותי במרינדה ייחודית עם בצל טרי בשמן. סלט זה מתאים כמנה ראשונה מושלמת",
   "description": "<p>**סלט הרינג כבוש עם בצל בשמן**</p> <p>גלו את הטעם המיוחד של סלט ההרינג הכבוש שלנו, המשלב הרינג איכותי במרינדה ייחודית עם בצל טרי בשמן. סלט זה מתאים כמנה ראשונה מושלמת לכל ארוחה, ומשלב טעמים עשירים וארומות נהדרות.</p> <p>– משקל נקי: 200 גרם<br/> – משקל כולל: 270 גרם</p> <p>כשרות: כשר בד”ץ העדה החרדית</p>"
  },
  {
@@ -388,8 +373,7 @@
    "smoked"
   ],
   "kosher": [
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/3095-0.webp"
@@ -409,8 +393,7 @@
    "smoked"
   ],
   "kosher": [
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/2910-0.webp",
@@ -494,8 +477,7 @@
    "frozen"
   ],
   "kosher": [
-   "beityosef",
-   "pesach"
+   "beityosef"
   ],
   "images": [
    "assets/img/p/2814-0.webp",
@@ -515,8 +497,7 @@
    "smoked"
   ],
   "kosher": [
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/2628-0.webp",
@@ -576,8 +557,7 @@
    "premium"
   ],
   "kosher": [
-   "beityosef",
-   "pesach"
+   "beityosef"
   ],
   "images": [
    "assets/img/p/2505-0.webp",
@@ -597,8 +577,7 @@
    "premium"
   ],
   "kosher": [
-   "beityosef",
-   "pesach"
+   "beityosef"
   ],
   "images": [
    "assets/img/p/2500-0.webp",
@@ -617,8 +596,7 @@
    "premium"
   ],
   "kosher": [
-   "beityosef",
-   "pesach"
+   "beityosef"
   ],
   "images": [
    "assets/img/p/2494-0.webp",
@@ -638,8 +616,7 @@
   ],
   "kosher": [
    "beityosef",
-   "mehadrin",
-   "pesach"
+   "mehadrin"
   ],
   "images": [
    "assets/img/p/2394-0.webp",
@@ -658,8 +635,7 @@
    "frozen"
   ],
   "kosher": [
-   "beityosef",
-   "pesach"
+   "beityosef"
   ],
   "images": [
    "assets/img/p/2383-0.webp",
@@ -680,8 +656,7 @@
    "smoked"
   ],
   "kosher": [
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/1977-0.webp",
@@ -701,8 +676,7 @@
    "smoked"
   ],
   "kosher": [
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/1918-0.webp",
@@ -738,9 +712,7 @@
   "categories": [
    "gifts"
   ],
-  "kosher": [
-   "pesach"
-  ],
+  "kosher": [],
   "images": [
    "assets/img/p/1903-0.webp"
   ],
@@ -760,8 +732,7 @@
   ],
   "kosher": [
    "beityosef",
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/1890-0.webp",
@@ -782,8 +753,7 @@
    "platters"
   ],
   "kosher": [
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/1621-0.webp",
@@ -803,8 +773,7 @@
    "platters"
   ],
   "kosher": [
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/1567-0.webp"
@@ -823,8 +792,7 @@
   ],
   "kosher": [
    "beityosef",
-   "mehadrin",
-   "pesach"
+   "mehadrin"
   ],
   "images": [
    "assets/img/p/1565-0.webp"
@@ -845,8 +813,7 @@
    "smoked"
   ],
   "kosher": [
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/1562-0.webp",
@@ -867,8 +834,7 @@
    "smoked"
   ],
   "kosher": [
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/1555-0.webp",
@@ -908,8 +874,7 @@
    "fresh"
   ],
   "kosher": [
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/1543-0.webp"
@@ -927,8 +892,7 @@
    "fresh"
   ],
   "kosher": [
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/1542-0.webp"
@@ -947,8 +911,7 @@
    "frozen"
   ],
   "kosher": [
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/1536-0.webp"
@@ -967,8 +930,7 @@
    "frozen"
   ],
   "kosher": [
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/1531-0.webp"
@@ -986,8 +948,7 @@
    "frozen"
   ],
   "kosher": [
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/1459-0.webp",
@@ -1083,8 +1044,7 @@
    "drinks"
   ],
   "kosher": [
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/1442-0.webp"
@@ -1102,8 +1062,7 @@
    "drinks"
   ],
   "kosher": [
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/1440-0.webp"
@@ -1121,8 +1080,7 @@
    "drinks"
   ],
   "kosher": [
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/1436-0.webp"
@@ -1141,8 +1099,7 @@
    "smoked"
   ],
   "kosher": [
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/1141-0.webp",
@@ -1240,8 +1197,7 @@
    "smoked"
   ],
   "kosher": [
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/1127-0.webp"
@@ -1302,14 +1258,13 @@
    "smoked"
   ],
   "kosher": [
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/1120-0.webp",
    "assets/img/p/1120-1.webp"
   ],
-  "summary": "טונה לבנה מעושנת של מותג SARFATI – מומחיות דגים מעושנים באיכות פרימיום. הדג מעושן באיטיות עם שבבי עץ טבעיים להשגת טעם עשיר ועדין. טונה אלבקור בעישון קר היא מנה ",
+  "summary": "טונה לבנה מעושנת של מותג SARFATI – מומחיות דגים מעושנים באיכות פרימיום. הדג מעושן באיטיות עם שבבי עץ טבעיים להשגת טעם עשיר ועדין. טונה אלבקור בעישון קר היא מנה",
   "description": "<p>טונה לבנה מעושנת של מותג SARFATI – מומחיות דגים מעושנים באיכות פרימיום.<br/> הדג מעושן באיטיות עם שבבי עץ טבעיים להשגת טעם עשיר ועדין.</p> <p>טונה אלבקור בעישון קר היא מנה טעימה ובריאה שנעשית בתהליך העישון הקר, מבלי להשתמש בחום כדי לשמור על הטעמים והאיכויות הבריאותיות של הטונה.</p> <p>הטונה אלבקור היא מין סוג של טונה המצויה במים קרים בעיקר באוקיינוס השקט ובים התיכון. יתרה מכך, טונה אלבקור מכילה כמויות גבוהות של חלבון, חומצות שומן אומגה-3, וויטמינים, ומינרלים. כתוצאה מכך, היא נחשבת לאחת ממקורות החלבון הטבעיים והבריאים ביותר.</p> <p>התהליך של העישון הקר מאפשר לטונה להשאר רכה, טעימה, ולשמור על איכויות התזונה שלה. הטונה נחשבת גם למקור מצוין של חלבון ללא סוכר, ולכן היא נמצאת בתפקיד חשוב בתפריטים הבריאים והטעימים.</p> <p>טונה אלבקור בעישון קר פרוס מוכנה להגשה ישירה על לחם, כסנדוויץ’, כחלק מסלטים ותוספת למנות קלות וטעימות. היא מתאימה גם לשימושים במטבח, כמו תוספת למנות , סושי, סלטים ומנות מבושלות.</p>"
  },
  {
@@ -1323,8 +1278,7 @@
    "smoked"
   ],
   "kosher": [
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/1117-0.webp",
@@ -1373,8 +1327,7 @@
    "frozen"
   ],
   "kosher": [
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/1112-0.webp",
@@ -1407,8 +1360,7 @@
    "smoked"
   ],
   "kosher": [
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/1109-0.webp",
@@ -1447,8 +1399,7 @@
    "platters"
   ],
   "kosher": [
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/1102-0.webp",
@@ -1469,15 +1420,14 @@
    "platters"
   ],
   "kosher": [
-   "mehadrin",
-   "pesach"
+   "mehadrin"
   ],
   "images": [
    "assets/img/p/1099-0.webp",
    "assets/img/p/1099-1.webp"
   ],
   "summary": "מגוון רחב של מגשים שיהפכו עבורכם כל אירוע ליוקרתי יותר !&nbsp, במידה והינכם רוצים לעצב מגש אישי.&nbsp, &nbsp, נשמח לתת מענה בטל’, : 08-6825888",
-  "description": "<p><strong>מגש של סלמון וטונה מעושנים – מושלם לאירועים, כאפריטיף או מנה ראשונה.</strong></p> <p><strong>הזמנה טלפונית שלושה ימים מראש 086825888</strong></p> <p><strong>ניתן להחליף טונה אדומה בטונה לבנה כדי שהמגש יהיה כשר לפסח.</strong></p>"
+  "description": "<p><strong>מגש של סלמון וטונה מעושנים – מושלם לאירועים, כאפריטיף או מנה ראשונה.</strong></p> <p><strong>הזמנה טלפונית שלושה ימים מראש 086825888</strong></p> <p><strong></strong></p>"
  },
  {
   "id": 1096,
@@ -1489,8 +1439,7 @@
    "platters"
   ],
   "kosher": [
-   "mehadrin",
-   "pesach"
+   "mehadrin"
   ],
   "images": [
    "assets/img/p/1096-0.webp",
@@ -1510,8 +1459,7 @@
    "smoked"
   ],
   "kosher": [
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/899-0.webp",
@@ -1532,8 +1480,7 @@
    "smoked"
   ],
   "kosher": [
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/897-0.webp",
@@ -1553,8 +1500,7 @@
    "smoked"
   ],
   "kosher": [
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/892-0.webp",
@@ -1587,8 +1533,7 @@
    "smoked"
   ],
   "kosher": [
-   "mehadrin",
-   "pesach"
+   "mehadrin"
   ],
   "images": [
    "assets/img/p/891-0.webp",
@@ -1609,8 +1554,7 @@
    "frozen"
   ],
   "kosher": [
-   "mehadrin",
-   "pesach"
+   "mehadrin"
   ],
   "images": [
    "assets/img/p/888-0.webp",
@@ -1631,8 +1575,7 @@
   ],
   "kosher": [
    "beityosef",
-   "mehadrin",
-   "pesach"
+   "mehadrin"
   ],
   "images": [
    "assets/img/p/886-0.webp",
@@ -1652,8 +1595,7 @@
    "smoked"
   ],
   "kosher": [
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/877-1.webp"
@@ -1672,8 +1614,7 @@
    "smoked"
   ],
   "kosher": [
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/875-0.webp",
@@ -1694,14 +1635,13 @@
    "smoked"
   ],
   "kosher": [
-   "mehadrin",
-   "pesach"
+   "mehadrin"
   ],
   "images": [
    "assets/img/p/872-0.webp"
   ],
   "summary": "מגוון רחב של מגשים שיהפכו עבורכם כל אירוע ליוקרתי יותר !&nbsp, במידה והנכם רוצים לעצב מגש אישי.&nbsp, &nbsp, נשמח לתת מענה בטל’, : 08-6825888 יש אפשרות למגש בהשגחה בד”ץ העדה החרדית",
-  "description": "<p><b>מגש מיקס דגים מעושנים מכיל סלמון בעישון חם, סלמון בעישון קר, טונה בעישון חם, טונה בעישון קר, מקרל בעישון קר, מקרל בעישון חם והרינג בעישון קר. </b></p> <p>‏ניתן להחליף טונה אדומה בטונה לבנה כדי שהמגש תהיה בכשרות בד״ץ העדה החרדית</p> <p>ניתן להחליף טונה אדומה בטונה לבנה כדי שהמגש יהיה כשר לפסח.</p> <p><strong>הזמנה טלפונית מראש 086825888</strong></p>"
+  "description": "<p><b>מגש מיקס דגים מעושנים מכיל סלמון בעישון חם, סלמון בעישון קר, טונה בעישון חם, טונה בעישון קר, מקרל בעישון קר, מקרל בעישון חם והרינג בעישון קר. </b></p> <p>‏ניתן להחליף טונה אדומה בטונה לבנה כדי שהמגש תהיה בכשרות בד״ץ העדה החרדית</p>  <p><strong>הזמנה טלפונית מראש 086825888</strong></p>"
  },
  {
   "id": 868,
@@ -1786,8 +1726,7 @@
    "smoked"
   ],
   "kosher": [
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/864-0.webp"
@@ -1805,8 +1744,7 @@
    "frozen"
   ],
   "kosher": [
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/861-0.webp",
@@ -1826,8 +1764,7 @@
   ],
   "kosher": [
    "eda",
-   "mehadrin",
-   "pesach"
+   "mehadrin"
   ],
   "images": [
    "assets/img/p/860-0.webp",
@@ -1848,8 +1785,7 @@
    "smoked"
   ],
   "kosher": [
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/845-0.webp",
@@ -1869,8 +1805,7 @@
    "smoked"
   ],
   "kosher": [
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/844-0.webp",
@@ -1904,8 +1839,7 @@
    "smoked"
   ],
   "kosher": [
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/764-0.webp",
@@ -1926,8 +1860,7 @@
    "smoked"
   ],
   "kosher": [
-   "mehadrin",
-   "pesach"
+   "mehadrin"
   ],
   "images": [
    "assets/img/p/766-0.webp",
@@ -1989,8 +1922,7 @@
    "smoked"
   ],
   "kosher": [
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/762-0.webp",
@@ -2010,8 +1942,7 @@
    "smoked"
   ],
   "kosher": [
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/760-0.webp",
@@ -2031,8 +1962,7 @@
    "frozen"
   ],
   "kosher": [
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/758-0.webp"
@@ -2051,8 +1981,7 @@
    "smoked"
   ],
   "kosher": [
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/718-0.webp",
@@ -2107,8 +2036,7 @@
    "smoked"
   ],
   "kosher": [
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/699-0.webp",
@@ -2143,8 +2071,7 @@
    "smoked"
   ],
   "kosher": [
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/692-0.webp"
@@ -2191,8 +2118,7 @@
    "smoked"
   ],
   "kosher": [
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/684-0.webp"
@@ -2248,8 +2174,7 @@
    "frozen"
   ],
   "kosher": [
-   "eda",
-   "pesach"
+   "eda"
   ],
   "images": [
    "assets/img/p/573-0.webp",
