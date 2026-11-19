@@ -391,13 +391,14 @@ def render_placeholders(text):
         reps[f"{{{{waze:{b['id']}}}}}"] = b["waze"]
         reps[f"{{{{maps:{b['id']}}}}}"] = b["maps"]
         reps[f"{{{{address:{b['id']}}}}}"] = b["address"]
+    # prefix the page's own root links first, before inserting generated HTML that already has the base
+    text = re.sub(r'(href|src)="/(?!/)', lambda m: f'{m.group(1)}="{BASE}/', text)
     for k, v in reps.items():
         text = text.replace(k, v)
     text = re.sub(r"\{\{products:(\w+):(\d+)\}\}", products_block, text)
     text = re.sub(r"\{\{posts:(\d+)\}\}", posts_block, text)
     text = text.replace("{{zones}}", zones(None)).replace("{{categories}}", cat_cards(None))
     text = re.sub(r"\{\{img:([\w-]+)\|([^}]*)\}\}", lambda m: site_img(m.group(1), m.group(2)), text)
-    text = re.sub(r'(href|src)="/(?!/)', lambda m: f'{m.group(1)}="{BASE}/', text)
     return text
 
 
